@@ -86,6 +86,23 @@ const homeButton = document.querySelector('.home__button');
 // About //
 const aboutSection = document.querySelector('.about__section');
 const aboutTitle = document.querySelector('.about__title');
+const aboutDescription = document.querySelector('.about__description');
+
+// Qualification //
+const qualificationSection = document.querySelector('.qualification__section');
+const qualificationTab1 = document.querySelector('.qualification__tab1');
+const qualificationTab2 = document.querySelector('.qualification__tab2');
+const qualificationSubtitle1 = document.querySelector('.qualification__content .qualification__data:first-child .qualification__subtitle');
+const qualificationMajor = document.querySelector('.qualification__content .qualification__data:nth-child(2) .qualification__title');
+const qualificationSubtitle2 = document.querySelector('.qualification__content .qualification__data:nth-child(2) .qualification__subtitle');
+const qualificationSubtitle3 = document.querySelector('.qualification__content .qualification__data:nth-child(3) .qualification__subtitle');
+const qualificationYear = document.querySelector('.qualification__content:nth-child(2) .qualification__data .qualification__year');
+const qualificationTitle = document.querySelector('.qualification__content:nth-child(2) .qualification__data:nth-child(2) .qualification__title');
+
+// Contact //
+const contactSection = document.querySelector('.contact__section');
+const contactDescription = document.querySelector('.contact__description');
+const contactNotes = document.querySelector('.contact__notes');
 
 languageButton.forEach(el =>{
 	el.addEventListener('click', ()=>{
@@ -101,6 +118,23 @@ languageButton.forEach(el =>{
 		// About
 		aboutSection.textContent = data[attr].about__section;
 		aboutTitle.textContent = data[attr].about__title;
+		aboutDescription.textContent = data[attr].about__description;
+
+		// Qualification
+		qualificationSection.textContent = data[attr].qualification__section;
+		qualificationTab1.textContent = data[attr].qualification__tab1;
+		qualificationTab2.textContent = data[attr].qualification__tab2;
+		qualificationSubtitle1.textContent = data[attr].qualification__subtitle1;
+		qualificationMajor.textContent = data[attr].qualification__major;
+		qualificationSubtitle2.textContent = data[attr].qualification__subtitle2;
+		qualificationSubtitle3.textContent = data[attr].qualification__subtitle3;
+		qualificationYear.textContent = data[attr].qualification__year;
+		qualificationTitle.textContent = data[attr].qualification__title;
+
+		// Contact
+		contactSection.textContent = data[attr].contact__section;
+		contactDescription.textContent = data[attr].contact__description;
+		contactNotes.textContent = data[attr].contact__notes;
 	});
 });
 
@@ -112,7 +146,24 @@ var data = {
 
 		// About //
 		"about__section" : "About Me",
-		"about__title": "Hey! My name is Nelly. I am a freelance frontend developer based in Medan, Indonesia."
+		"about__title": "Hey! My name is Nelly. I am a freelance frontend developer based in Medan, Indonesia.",
+		"about__description": "I love working on fun little projects especially for individuals and small businesses during my free time. I am open to projects at the moment. Take a look at my portfolio below, if you think I'd be a good match send me an email or message on my social media.",
+
+		// Qualification
+		"qualification__section": "Qualification",
+		"qualification__tab1": "Education",
+		"qualification__tab2": "Work",
+		"qualification__major": "Economics Education Department",
+		"qualification__subtitle1": "Progate - Course",
+		"qualification__subtitle2": "State University of Medan",
+		"qualification__subtitle3": "Medan - Course",
+		"qualification__year": "2021 - Now",
+		"qualification__title": "Economy Teacher",
+
+		// Contact
+		"contact__section": "Contact Me",
+		"contact__description": "If you have a project that you want to carry out, do not hesitate and tell me what it is, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!",
+		"contact__notes": "Click button fo find me, or click email button to copy my email address."
 	},
 	"indonesia":{
 		// Home //
@@ -121,7 +172,25 @@ var data = {
 
 		// About //
 		"about__section" : "Tentang",
-		"about__title": "Hai! Nama Saya Nelly. Saya seorang freelance frontend developer dari Medan, Indonesia."
+		"about__title": "Hai! Nama Saya Nelly. Saya seorang freelance frontend developer dari Medan, Indonesia.",
+		"about__description": "Saya suka mengerjakan proyek kecil yang menyenangkan terutama untuk individu dan bisnis kecil selama waktu luang saya. Saya terbuka untuk proyek saat ini. Lihatlah portofolio saya di bawah ini, jika menurut Anda saya cocok, kirimkan saya email atau pesan di media sosial saya.",
+
+		// Qualification
+		"qualification__section": "Kualifikasi",
+		"qualification__tab1": "Pendidikan",
+		"qualification__tab2": "Pekerjaan",
+		"qualification__major": "Pendidikan Ekonomi",
+		"qualification__subtitle1": "Progate - Kursus",
+		"qualification__subtitle2": "Universitas Negeri Medan",
+		"qualification__subtitle3": "Medan - Kursus",
+		"qualification__year": "2021 - Sekarang",
+		"qualification__title": "Guru Ekonomi",
+
+		// Contact
+		"contact__section": "Kontak",
+		"contact__description": "Kalau kamu punya proyek yang ingin terlaksanakan, jangan ragu dan beri tahu saya apa itu, kamu dapat menghubungi saya kapan saja. Apakah kamu memiliki pertanyaan atau hanya ingin menyapa, saya akan mencoba yang terbaik untuk menghubungi kamu kembali!",
+		"contact__notes": "Klik tombol agar dapat menghubungi saya, atau klik tombol email untuk menyalin alamat email saya."
+
 	}
 }
 // ===== end languages ===== //
