@@ -75,7 +75,26 @@ themeButton.addEventListener('click', () => {
 })
 // ===== end dark light theme ===== //
 
-// ===== 
+// ===== SOCIAL MEDIA ===== //
+const emailAddress = document.getElementById('email-address');
+const copyEmailAddress = document.querySelector('.copy__email');
+
+copyEmailAddress.addEventListener('click', ()=>{
+	document.execCommand("copy");
+});
+
+copyEmailAddress.addEventListener("copy", function(event){
+	event.preventDefault();
+	if(event.clipboardData){
+		event.clipboardData.setData("text", emailAddress.textContent);
+		alert("Email Copied!")
+	}else{
+		alert("Email Not copied!")
+	}
+});
+// ===== end social media ===== //
+
+// ===== LANGUAGES ===== //
 const navLanguages = document.querySelector('.nav__languages');
 const languageButton = document.querySelectorAll('.language__button');
 
@@ -102,7 +121,6 @@ const qualificationTitle = document.querySelector('.qualification__content:nth-c
 // Contact //
 const contactSection = document.querySelector('.contact__section');
 const contactDescription = document.querySelector('.contact__description');
-const contactNotes = document.querySelector('.contact__notes');
 
 languageButton.forEach(el =>{
 	el.addEventListener('click', ()=>{
@@ -162,13 +180,12 @@ var data = {
 
 		// Contact
 		"contact__section": "Contact Me",
-		"contact__description": "If you have a project that you want to carry out, do not hesitate and tell me what it is, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!",
-		"contact__notes": "Click button fo find me, or click email button to copy my email address."
+		"contact__description": "If you have a project that you want to carry out, do not hesitate and tell me what it is, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!"
 	},
 	"indonesia":{
 		// Home //
 		"home__subtitle": "Halo, Nama Saya",
-		"home__button": "Kontak Saya",
+		"home__button": "Kontak",
 
 		// About //
 		"about__section" : "Tentang",
@@ -188,9 +205,7 @@ var data = {
 
 		// Contact
 		"contact__section": "Kontak",
-		"contact__description": "Kalau kamu punya proyek yang ingin terlaksanakan, jangan ragu dan beri tahu saya apa itu, kamu dapat menghubungi saya kapan saja. Apakah kamu memiliki pertanyaan atau hanya ingin menyapa, saya akan mencoba yang terbaik untuk menghubungi kamu kembali!",
-		"contact__notes": "Klik tombol agar dapat menghubungi saya, atau klik tombol email untuk menyalin alamat email saya."
-
+		"contact__description": "Kalau kamu punya proyek yang ingin terlaksanakan, jangan ragu dan beri tahu saya apa itu, kamu dapat menghubungi saya kapan saja. Apakah kamu memiliki pertanyaan atau hanya ingin menyapa, saya akan mencoba yang terbaik untuk menghubungi kamu kembali!"
 	}
 }
 // ===== end languages ===== //
@@ -244,6 +259,24 @@ TweenMax.to(".overlay", 2, {
    ease: Expo.easeInOut
 })
 // ===== end gsap animation ===== //
+
+// ===== AOS ANIMATE ===== //
+const sectionTitle = document.querySelectorAll('.section-title');
+sectionTitle.forEach((n, i) => {
+	n.dataset.aos = 'fade-down';
+	n.dataset.aosDelay = i * 100;
+});
+
+// 8. gallery -> .gallery__box
+const portfolioBox = document.querySelectorAll('.portfolio__box');
+portfolioBox.forEach((n, i) => {
+	n.dataset.aos = 'zoom-in-down';
+	n.dataset.aosDelay = i * 100;
+});
+AOS.init({
+	duration: 1500,
+	once: true,  
+});
 
 
 

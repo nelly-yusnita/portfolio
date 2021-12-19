@@ -13,6 +13,9 @@
 	<!-- ===== BOXICONS ===== -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
+	<!-- ===== AOS ANIMATE CSS ===== -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 	<title>Nelly Yusnita &mdash; Portfolio</title>
 </head>
 <body>
@@ -66,7 +69,7 @@
 		<!-- ===== HOME ===== -->
 		<section class="home" id="home">
 			<div class="home__container container grid">
-				<div class="home__data">
+				<div class="home__data" data-aos="fade-right" data-aos-delay="1500">
 					<span class="home__subtitle">Hello, My name is</span>
 					<h1 class="home__title">Nelly Yusnita</h1>
 					<span class="home__profession">Frontend Developer</span>
@@ -74,8 +77,8 @@
 				</div>
 
 				<div class="home__images">
-					<div class="home__square"></div>
-					<div class="home__img"></div>
+					<div class="home__square" data-aos="fade-left" data-aos-delay="3000"></div>
+					<div class="home__img" data-aos="fade-left" data-aos-delay="2500"></div>
 				</div>
 			</div>
 
@@ -94,18 +97,18 @@
 
 			<div class="about__container grid">
 				<div class="about__images">
-					<img src="assets/img/about_img.jpg" alt="" class="about__img">
-					<div class="about__square"></div>
+					<img src="assets/img/about_img.jpg" alt="" class="about__img" data-aos="fade-right">
+					<div class="about__square" data-aos="fade-right" data-aos-delay="100"></div>
 				</div>
 
-				<div class="about__data">
+				<div class="about__data" data-aos="fade-left" data-aos-delay="150">
 					<h1 class="about__title">Hey! My name is Nelly. I am a freelance frontend developer based in Medan, Indonesia.</h1>
 					<p class="about__description">I love working on fun little projects especially for individuals and small businesses during my free time. I am open to projects at the moment. Take a look at my <a href="#portfolio" class="about__link-button">portfolio</a> below, if you think I'd be a good match send me an email or message on my social media.</p>
 
-					<div class="social__media">
-						<a href="#" class="sosmed sosmed__ig"><i class='bx bxl-instagram sosmed__icon'></i></a>
-						<a href="#" class="sosmed sosmed__yt"><i class='bx bxl-youtube sosmed__icon'></i></a>
-						<a href="#" class="sosmed sosmed__git"><i class='bx bx-git-branch sosmed__icon'></i></a>
+					<div class="social__media-about">
+						<a href="#" class="social__box social__instagram"><i class='bx bxl-instagram social__icon'></i></a>
+						<a href="#" class="social__box sosmed__youtube"><i class='bx bxl-youtube social__icon'></i></a>
+						<a href="#" class="social__box sosmed__github"><i class='bx bx-git-branch social__icon'></i></a>
 					</div>
 				</div>
 			</div>
@@ -116,7 +119,7 @@
 		<section class="qualification section container">
 			<h2 class="section-title qualification__section">Qualification</h2>
 
-			<div class="qualification__container">
+			<div class="qualification__container" data-aos="fade-down" data-aos-delay="150">
 				<div class="qualification__tabs">
 					<div class="qualification__button button--flex qualification__active" data-target='#education'>
 						<i class='bx bxs-graduation qualification__icon'></i>
@@ -303,16 +306,38 @@
 			<h2 class="section-title contact__section">Contact Me</h2>
 
 			<div class="contact__container">
-				<p class="contact__description">If you have a project that you want to carry out, do not hesitate and tell me what it is, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
+				<p class="contact__description" data-aos="fade-down">If you have a project that you want to carry out, do not hesitate and tell me what it is, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
 
-				<div class="contact__buttons">
-					<a href="#" class="sosmed sosmed__mail"><i class='bx bx-envelope sosmed__icon'></i></a>
-					<a href="#" class="sosmed sosmed__ig"><i class='bx bxl-instagram sosmed__icon'></i></a>
-					<a href="#" class="sosmed sosmed__wa"><i class='bx bxl-whatsapp sosmed__icon'></i></a>
-					<a href="#" class="sosmed sosmed__tl"><i class='bx bxl-telegram sosmed__icon'></i></a>
+				<div class="social">
+					<div class="social__container grid" data-aos="fade-down" data-aos-delay="150">
+						<div class="social__content">
+							<div class="social__box social__email">
+								<a href="#" class="social__link"><i class='bx bx-envelope social__icon'></i></a>
+								<span class="email__address" id="email-address">yusnitaanelly@gmail.com</span>
+								<div class="copy__email"><i class='bx bx-copy social__icon'></i></div>
+							</div>
+							<span class="social__tooltip social__tooltip-bottom">Copy Email</span>
+						</div>
+						<div class="social__content">
+							<div class="social__box social__instagram">
+								<a href="#" class="social__link"><i class='bx bxl-instagram social__icon'></i></a>
+							</div>
+							<span class="social__tooltip social__tooltip-top">Instagram</span>
+						</div>
+						<div class="social__content">
+							<div class="social__box social__whatsapp">
+								<a href="#" class="social__link"><i class='bx bxl-whatsapp social__icon'></i></a>
+							</div>
+							<span class="social__tooltip social__tooltip-bottom">WhatsApp</span>
+						</div>
+						<div class="social__content">
+							<div class="social__box social__telegram">
+								<a href="#" class="social__link"><i class='bx bxl-telegram social__icon'></i></a>
+							</div>
+							<span class="social__tooltip social__tooltip-top">Telegram</span>
+						</div>
+					</div>
 				</div>
-
-				<span class="contact__notes">Click button fo find me, or click email button to copy my email address.</span>
 			</div>
 		</section>
 		<!-- ===== end portfolio ===== -->
@@ -349,6 +374,9 @@
 
 	<!-- ===== GSAP ===== -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+	<!-- ===== AOS ANIMATE JS ===== -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 	<!-- ===== MAIN JS ===== -->
 	<script src="assets/js/script.js"></script>
