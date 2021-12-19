@@ -257,6 +257,9 @@ body.dark-theme{
 .social__container{
 	grid-template-columns: repeat(auto-fit, minmax(45px,1fr));
 	grid-gap: .5rem;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 .social__box{
 	width: 45px;
@@ -878,7 +881,7 @@ body.dark-theme{
 
 @media screen and (min-width: 476px){
 	/* ===== SOCIAL MEDIA ===== */
-	.social__container{
+	.contact .social__container{
 		max-width: 250px;
 		margin-left: auto;
 		margin-right: auto;
@@ -894,14 +897,6 @@ body.dark-theme{
 		margin-right: var(--mb-2);
 	}
 	/* ===== end layout ===== */
-
-	/* ===== SOCIAL MEDIA ===== */
-	.social__container{
-		max-width: 250px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	/* ===== end social media ===== */
 }
 
 @media screen and (min-width: 768px){
