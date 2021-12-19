@@ -104,7 +104,6 @@ const homeButton = document.querySelector('.home__button');
 
 // About //
 const aboutSection = document.querySelector('.about__section');
-const aboutTitle = document.querySelector('.about__title');
 const aboutDescription = document.querySelector('.about__description');
 
 // Qualification //
@@ -135,7 +134,6 @@ languageButton.forEach(el =>{
 
 		// About
 		aboutSection.textContent = data[attr].about__section;
-		aboutTitle.textContent = data[attr].about__title;
 		aboutDescription.textContent = data[attr].about__description;
 
 		// Qualification
@@ -164,8 +162,7 @@ var data = {
 
 		// About //
 		"about__section" : "About Me",
-		"about__title": "Hey! My name is Nelly. I am a freelance frontend developer based in Medan, Indonesia.",
-		"about__description": "I love working on fun little projects especially for individuals and small businesses during my free time. I am open to projects at the moment. Take a look at my portfolio below, if you think I'd be a good match send me an email or message on my social media.",
+		"about__description": "Hey! My name is Nelly. I am a freelance frontend developer based in Medan, Indonesia. I love working on fun little projects especially for individuals and small businesses during my free time. I am open to projects at the moment. Take a look at my portfolio below, if you think I'd be a good match send me an email or message on my social media.",
 
 		// Qualification
 		"qualification__section": "Qualification",
@@ -189,8 +186,7 @@ var data = {
 
 		// About //
 		"about__section" : "Tentang",
-		"about__title": "Hai! Nama Saya Nelly. Saya seorang freelance frontend developer dari Medan, Indonesia.",
-		"about__description": "Saya suka mengerjakan proyek kecil yang menyenangkan terutama untuk individu dan bisnis kecil selama waktu luang saya. Saya terbuka untuk proyek saat ini. Lihatlah portofolio saya di bawah ini, jika menurut Anda saya cocok, kirimkan saya email atau pesan di media sosial saya.",
+		"about__description": "Hai! Nama saya Nelly. Saya seorang freelance frontend developer dari Medan, Indonesia. Saya suka mengerjakan proyek kecil yang menyenangkan terutama untuk individu dan bisnis kecil di waktu luang saya. Saya terbuka untuk proyek saat ini. Lihat portofolio saya di bawah ini, jika menurut Anda saya cocok, kirimkan saya email atau pesan di media sosial saya.",
 
 		// Qualification
 		"qualification__section": "Kualifikasi",
@@ -277,6 +273,7 @@ AOS.init({
 	duration: 1500,
 	once: true,  
 });
+// ===== end animate ===== //
 
 
 
