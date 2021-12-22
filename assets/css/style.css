@@ -219,7 +219,7 @@ body.dark-theme{
 	margin-left: auto;
 	margin-right: auto;
 }
-.section-title:before{
+.section-title::before{
 	content: '';
 	position: absolute;
 	top: 60%;
@@ -372,10 +372,6 @@ body.dark-theme{
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
 	text-align: center;
 }
 .nav__item:not(:last-child){

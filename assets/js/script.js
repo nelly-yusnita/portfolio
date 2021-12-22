@@ -263,12 +263,12 @@ sectionTitle.forEach((n, i) => {
 	n.dataset.aosDelay = i * 100;
 });
 
-// 8. gallery -> .gallery__box
 const portfolioBox = document.querySelectorAll('.portfolio__box');
 portfolioBox.forEach((n, i) => {
 	n.dataset.aos = 'zoom-in-down';
 	n.dataset.aosDelay = i * 100;
 });
+
 AOS.init({
 	duration: 1500,
 	once: true,  
