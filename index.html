@@ -538,48 +538,42 @@
 		   text-align: center;
 		   margin-bottom: var(--mb-1-5);
 		}
+		.contact__list{
+		   -ms-grid-columns: (minmax(265px,1fr))[auto-fit];
+		       grid-template-columns: repeat(auto-fit, minmax(265px,1fr));
+		   grid-gap: 1.5rem;
+		}
+		.contact__item{
+		   background-color: var(--pure-white-color);
+		   border-radius: .5rem;
+		   padding: 1.5rem;
+		   text-align: center;
+		   box-shadow: 0 4px 6px rgba(174,190,205,0.3);
+		   -webkit-transition: .3s;
+		   transition: .3s;
+		}
+		.contact__item:hover{
+		   box-shadow: 0 6px 8px rgba(174,190,205,0.4);
+		}
+		.contact__icon{
+		   font-size: 2rem;
+		   color: var(--blue-light-color);
+		}
+		.contact__item-title{
+		   font-family: var(--special-font);
+		   font-size: var(--h2-font-size);
+		   font-weight: var(--semi-bold-font);
+		   margin-bottom: var(--mb-0-5);
+		}
+		.contact__social:not(:last-child){
+		   margin-right: .25rem;
+		}
 		/* ===== end contact ===== */
 
-		/* ===== SOCIAL MEDIA ===== */
-		.social__media{
-		   grid-row-gap: .75rem;
-		}
-		.social__media-link{
-		   display: -webkit-inline-box;
-		   display: -ms-inline-flexbox;
-		   display: inline-flex;
-		   -webkit-box-pack: center;
-		       -ms-flex-pack: center;
-		           justify-content: center;
-		   -webkit-box-align: center;
-		       -ms-flex-align: center;
-		           align-items: center;
-		   padding: 0.75rem 1rem;
-		   color: var(--white-color);
-		}
-		.social__media-icon{
-		   font-size: 1.5rem;
-		   margin-right: var(--mb-0-5);
-		}
-		.email{
-		   background-color: #D44638;
-		}
-		.instagram{
-		   background: -webkit-linear-gradient(45deg, #8134AF, #DD2A7B, #F58529);
-		   background: linear-gradient(45deg, #8134AF, #DD2A7B, #F58529);
-		}
-		.whatsapp{
-		   background-color: #25D366;
-		}
-		.telegram{
-		   background-color: #0088CC;
-		}
-		.youtube{
-		   background-color: #E62117;
-		}
-		/* ===== end social media ===== */
-
 		/* ===== FOOTER ===== */
+		.footer{
+		   margin-top: 2.5rem;
+		}
 		.footer__container{
 		   display: -webkit-box;
 		   display: -ms-flexbox;
@@ -933,7 +927,7 @@
 				</div>
 				<div class="about__data" data-aos="fade-left">
 					<p class="about__description">Hey! My name is Nelly. I am a freelance frontend developer based in Medan, Indonesia. I love working on fun little projects especially for individuals and small businesses during my free time. I provide custom designs at afforable prices. Frequently your website is the first impression your customers will get, so make sure it’s a good one. Since my time is split between a few different things, I’m not able to take on every project I’d like to, but I'm always looking for fun work. Take a look at my portfolio below, if you think I'd be a good match send me an email or message on my social media.
-						<img src="assets/img/heart2.png" alt="" class="about__icon">
+						<img src="assets/img/heart.png" alt="" class="about__icon">
 					</p>
 				</div>
 			</div>
@@ -991,27 +985,26 @@
 			<div class="contact__container">
 				<p class="contact__description" data-aos="fade-down">If you have a project that you want to carry out, do not hesitate and tell me what it is, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
 
-				<div class="social__media grid">
-					<a href="#" class="social__media-link email">
-						<i class='bx bx-envelope social__media-icon'></i>
-						<span class="social__media-description">yusnitaanelly@gmail.com</span>
-					</a>
-					<a href="#" class="social__media-link instagram">
-						<i class='bx bxl-instagram social__media-icon'></i>
-						<span class="social__media-description">Instagram</span>
-					</a>
-					<a href="#" class="social__media-link whatsapp">
-						<i class='bx bxl-whatsapp social__media-icon'></i>
-						<span class="social__media-description">WhatsApp</span>
-					</a>
-					<a href="#" class="social__media-link telegram">
-						<i class='bx bxl-telegram social__media-icon'></i>
-						<span class="social__media-description">Telegram</span>
-					</a>
-					<a href="#" class="social__media-link youtube">
-						<i class='bx bxl-youtube social__media-icon'></i>
-						<span class="social__media-description">Youtube</span>
-					</a>
+				<div class="contact__list grid">
+					<div class="contact__item">
+						<i class='bx bx-envelope contact__icon'></i>
+						<h3 class="contact__item-title">Gmail</h3>
+						<span class="contact__text">yusnitaanelly@gmail.com</span>
+					</div>
+					<div class="contact__item">
+						<i class='bx bx-chat contact__icon'></i>
+						<h3 class="contact__item-title">Chat</h3>
+						<div>
+							<a href="#" class="contact__social"><img src="assets/img/whatsapp.png" alt=""></a>
+							<a href="#" class="contact__social"><img src="assets/img/instagram.png" alt=""></a>
+							<a href="#" class="contact__social"><img src="assets/img/telegram.png" alt=""></a>
+						</div>
+					</div>
+					<div class="contact__item">
+						<i class='bx bx-slideshow contact__icon'></i>
+						<h3 class="contact__item-title">Tutorial</h3>
+						<a href="#" class="contact__social"><img src="assets/img/youtube.png" alt=""></a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -1249,8 +1242,8 @@
 		});
 
 		// 5. Contact -> .contact__description, .social__media-link
-		const socialMediaLink = document.querySelectorAll('.social__media-link');
-		socialMediaLink.forEach((n, i) => {
+		const contactItem = document.querySelectorAll('.contact__item');
+		contactItem.forEach((n, i) => {
 			n.dataset.aos = 'fade-down';
 			n.dataset.aosDelay = i * 100;
 		});
