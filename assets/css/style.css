@@ -181,12 +181,6 @@ body.dark-theme{
 .dark-theme .footer__circle{
 	background-color: var(--body-light-color);
 }
-.dark-theme .scrollup{
-	background-color: rgba(0,0,0,.7);
-}
-.dark-theme .scrollup:hover{
-	background-color: rgba(0,0,0,.9);
-}
 /* ===== end variables light theme ===== */
 
 /* ===== SCROLL BAR ===== */
@@ -720,34 +714,6 @@ body.dark-theme{
 	font-size: var(--smaller-font-size);
 }
 /* ===== end footer ===== */
-
-/* ===== SCROLL UP ===== */
-.scrollup{
-   position: fixed;
-   right: 1rem;
-   bottom: -15%;
-   background-color: rgba(53,88,154,.8);
-   padding: .5rem;
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   border-radius: .3rem;
-   -webkit-transition: .4s;
-   transition: .4s;
-}
-.scrollup:hover{
-	background-color: rgba(53,88,154,1);
-}
-.scrollup__icon{
-   color: var(--white-color);
-   font-size: 1.2rem;
-}
-
-/* Show scroll */
-.show-scroll{
-   bottom: 3.5rem;
-}
-/* ===== end scroll up ===== */
 
 /* ===== BREAKPOINTS ===== */
 /* For small devices */
