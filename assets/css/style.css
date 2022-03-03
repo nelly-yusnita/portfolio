@@ -344,14 +344,14 @@ body.dark-theme{
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	-webkit-column-gap: .75rem !important;
-	   -moz-column-gap: .75rem !important;
-	        column-gap: .75rem !important;
 	margin-left: auto;
 	margin-right: .85rem;
 }
 .language__button{
 	cursor: pointer;
+}
+.english__button{
+	margin-right: .75rem;
 }
 .language__icon{
 	width: 20px;
@@ -692,9 +692,9 @@ body.dark-theme{
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	-webkit-column-gap: 1.25rem;
-	   -moz-column-gap: 1.25rem;
-	        column-gap: 1.25rem;
+}
+.footer__social-link:not(:last-child){
+	margin-right: 1.25rem;
 }
 .footer__social-link{
 	font-size: 1.75rem;
