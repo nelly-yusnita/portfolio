@@ -28,36 +28,36 @@ window.addEventListener('scroll', scrollActive);
 // ===== end scroll sections active link ===== //
 
 // ===== PORTFOLIO ===== //
-const modalViews = document.querySelectorAll('.portfolio__modal'),
-		modalBtns = document.querySelectorAll('.portfolio__button'),
-		modalClose = document.querySelectorAll('.portfolio__modal-close'),
-		portfolioButtonLink = document.querySelectorAll('.portfolio__button-link');
+// const modalViews = document.querySelectorAll('.portfolio__modal'),
+// 		modalBtns = document.querySelectorAll('.portfolio__button'),
+// 		modalClose = document.querySelectorAll('.portfolio__modal-close'),
+// 		portfolioButtonLink = document.querySelectorAll('.portfolio__button-link');
 
-let modal = function(modalClick){
-	modalViews[modalClick].classList.add('active-modal');
-}
+// let modal = function(modalClick){
+// 	modalViews[modalClick].classList.add('active-modal');
+// }
 
-modalBtns.forEach((mb,i)=>{
-	mb.addEventListener('click', ()=>{
-		modal(i)
-	})
-})
+// modalBtns.forEach((mb,i)=>{
+// 	mb.addEventListener('click', ()=>{
+// 		modal(i)
+// 	})
+// })
 
-modalClose.forEach((mc) =>{
-	mc.addEventListener('click', ()=>{
-		modalViews.forEach((mv) =>{
-			mv.classList.remove('active-modal')
-		})
-	})
-})
+// modalClose.forEach((mc) =>{
+// 	mc.addEventListener('click', ()=>{
+// 		modalViews.forEach((mv) =>{
+// 			mv.classList.remove('active-modal')
+// 		})
+// 	})
+// })
 
-portfolioButtonLink.forEach((bc) =>{
-	bc.addEventListener('click', ()=>{
-		modalViews.forEach((bv) =>{
-			bv.classList.remove('active-modal')
-		})
-	})
-})
+// portfolioButtonLink.forEach((bc) =>{
+// 	bc.addEventListener('click', ()=>{
+// 		modalViews.forEach((bv) =>{
+// 			bv.classList.remove('active-modal')
+// 		})
+// 	})
+// })
 // ===== end portfolio ===== //
 
 // ===== DARK LIGHT THEME ===== //
