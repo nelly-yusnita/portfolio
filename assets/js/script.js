@@ -173,7 +173,12 @@ sectionTitle.forEach((n, i) => {
 
 // 5. portfolio -> .portfolio__container
 
-// 6. contact -> .contact__title, .contact__card, .contact__form, .contact__closing
+// 6. contact -> .contact__card
+const contactCard = document.querySelectorAll('.contact__card');
+contactCard.forEach((n, i) => {
+	n.dataset.aos = 'fade-down';
+	n.dataset.aosDelay = i * 150;
+});
 
 // 7. footer -> .footer__title, .footer__list, .footer__social
 
