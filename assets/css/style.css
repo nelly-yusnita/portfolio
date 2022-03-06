@@ -539,15 +539,15 @@ body.dark-theme{
 
 /*Active modal*/
 .active-modal{
-	opacity: 1;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	visibility: visible;
+	opacity: 1 !important;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" !important;
+	visibility: visible !important;
 }
 /* ===== end portfolio ===== */
 
 /* ===== CONTACT ===== */
 .contact__container{
-	padding-bottom: 3rem;
+	padding-bottom: 1.5rem;
 }
 .contact__info{
 	grid-gap: 1rem;
