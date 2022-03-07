@@ -485,13 +485,14 @@ body.dark-theme{
 	display: -ms-grid;
 	display: grid;
 	place-items: center;
-	display: none;
+	display: none !important;
 	/*visibility: hidden;
 	opacity: 0;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";*/
 	-webkit-transition: .4s;
 	transition: .4s;
 	z-index: 1000 !important;
+	pointer-events: auto;
 }
 .porfolio__modal-content{
 	text-align: center;
@@ -521,7 +522,7 @@ body.dark-theme{
 
 /*Active modal*/
 .active-modal{
-	display: grid;
+	display: grid !important;
 	/*opacity: 1 !important;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" !important;
 	visibility: visible !important;*/
