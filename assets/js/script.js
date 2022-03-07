@@ -168,34 +168,34 @@ var data = {
 // 1. home -> .home__subtitle, .home__title, .home__profession, .home__img
 
 // 2. section__subtitle
-const sectionSubtitle = document.querySelectorAll('.section__subtitle');
-sectionSubtitle.forEach((n, i) => {
-	n.dataset.aos = 'fade-down';
-	n.dataset.aosDelay = i * 100;
-});
+// const sectionSubtitle = document.querySelectorAll('.section__subtitle');
+// sectionSubtitle.forEach((n, i) => {
+// 	n.dataset.aos = 'fade-down';
+// 	n.dataset.aosDelay = i * 100;
+// });
 
 // 3. section__title
-const sectionTitle = document.querySelectorAll('.section__title');
-sectionTitle.forEach((n, i) => {
-	n.dataset.aos = 'fade-down';
-	n.dataset.aosDelay = i * 150;
-});
+// const sectionTitle = document.querySelectorAll('.section__title');
+// sectionTitle.forEach((n, i) => {
+// 	n.dataset.aos = 'fade-down';
+// 	n.dataset.aosDelay = i * 150;
+// });
 
 // 4. about -> .about__img, .about__social, .about__data
 
 // 5. portfolio -> .portfolio__container
 
 // 6. contact -> .contact__card
-const contactCard = document.querySelectorAll('.contact__card');
-contactCard.forEach((n, i) => {
-	n.dataset.aos = 'fade-down';
-	n.dataset.aosDelay = i * 100;
-});
+// const contactCard = document.querySelectorAll('.contact__card');
+// contactCard.forEach((n, i) => {
+// 	n.dataset.aos = 'fade-down';
+// 	n.dataset.aosDelay = i * 100;
+// });
 
 // 7. footer -> .footer__title, .footer__list, .footer__social
 
-AOS.init({
-	duration: 1500,
-	once: true,  
-});
+// AOS.init({
+// 	duration: 1500,
+// 	once: true,  
+// });
 // ===== end aos animate ===== //
