@@ -125,7 +125,7 @@
 			<div class="portfolio__container grid" data-aos="fade-down">
 				<!-- 1 -->
 				<div class="portfolio__card">
-					<img src="assets/img/coffee.png" alt="" class="portfolio__img">
+					<img src="assets/img/coffee.PNG" alt="" class="portfolio__img">
 
 					<div class="portfolio__button">
 						Demo <i class="bx bx-right-arrow-alt portfolio__icon"></i>
@@ -135,7 +135,7 @@
 						<div class="porfolio__modal-content">
 							<i class="bx bx-x portfolio__modal-close"></i>
 
-							<img src="assets/img/coffee.png" alt="" class="portfolio__modal-img">
+							<img src="assets/img/coffee.PNG" alt="" class="portfolio__modal-img">
 							<span class="portfolio__modal-description">This website is demo for testing purpose, no orders shall be fulfilled.</span>
 
 							<a href="https://nelly-yusnita.github.io/coffee/" class="button portfolio__button-link" target="_blank">View Website</a>
@@ -145,7 +145,7 @@
 
 				<!-- 2 -->
 				<div class="portfolio__card">
-					<img src="assets/img/plants.png" alt="" class="portfolio__img">
+					<img src="assets/img/plants.PNG" alt="" class="portfolio__img">
 
 					<div class="portfolio__button">
 						Demo <i class="bx bx-right-arrow-alt portfolio__icon"></i>
@@ -155,7 +155,7 @@
 						<div class="porfolio__modal-content">
 							<i class="bx bx-x portfolio__modal-close"></i>
 
-							<img src="assets/img/plants.png" alt="" class="portfolio__modal-img">
+							<img src="assets/img/plants.PNG" alt="" class="portfolio__modal-img">
 							<span class="portfolio__modal-description">This website is demo for testing purpose, no orders shall be fulfilled.</span>
 
 							<a href="https://nelly-yusnita.github.io/plants/" class="button portfolio__button-link" target="_blank">View Website</a>
@@ -185,7 +185,7 @@
 
 				<!-- 4 -->
 				<div class="portfolio__card">
-					<img src="assets/img/undangdigitalaja.png" alt="" class="portfolio__img">
+					<img src="assets/img/undangdigitalaja.PNG" alt="" class="portfolio__img">
 
 					<div class="portfolio__button">
 						Demo <i class="bx bx-right-arrow-alt portfolio__icon"></i>
@@ -195,7 +195,7 @@
 						<div class="porfolio__modal-content">
 							<i class="bx bx-x portfolio__modal-close"></i>
 
-							<img src="assets/img/undangdigitalaja.png" alt="" class="portfolio__modal-img">
+							<img src="assets/img/undangdigitalaja.PNG" alt="" class="portfolio__modal-img">
 							<span class="portfolio__modal-description">This website is demo for testing purpose, no orders shall be fulfilled.</span>
 
 							<a href="https://undang-digital-aja.github.io/main/" class="button portfolio__button-link" target="_blank">View Website</a>
@@ -205,7 +205,7 @@
 
 				<!-- 5 -->
 				<div class="portfolio__card">
-					<img src="assets/img/footwear.png" alt="" class="portfolio__img">
+					<img src="assets/img/footwear.PNG" alt="" class="portfolio__img">
 
 					<div class="portfolio__button">
 						Demo <i class="bx bx-right-arrow-alt portfolio__icon"></i>
@@ -215,7 +215,7 @@
 						<div class="porfolio__modal-content">
 							<i class="bx bx-x portfolio__modal-close"></i>
 
-							<img src="assets/img/footwear.png" alt="" class="portfolio__modal-img">
+							<img src="assets/img/footwear.PNG" alt="" class="portfolio__modal-img">
 							<span class="portfolio__modal-description">This website is demo for testing purpose, no orders shall be fulfilled.</span>
 
 							<a href="https://nelly-yusnita.github.io/footwear/" class="button portfolio__button-link" target="_blank">View Website</a>
@@ -253,8 +253,7 @@
 
 			<div class="contact__container grid">
 				<div class="contact__content">
-					<h3 class="contact__title" data-aos="fade-down">Talk to me</h3>
-					<div class="contact__info grid" data-aos="fade-right">
+					<div class="contact__info grid">
 						<!-- 1 -->
 						<div class="contact__card">
 							<i class='bx bx-envelope contact__card-icon'></i>
@@ -288,29 +287,6 @@
 							</a>
 						</div>
 					</div>
-				</div>
-
-				<div class="contact__content">
-					<h3 class="contact__title" data-aos="fade-down">Write me your project</h3>
-
-					<form action="" class="contact__form" data-aos="fade-left">
-						<div class="contact__form-div">
-							<label for="" class="contact__form-tag">Name</label>
-							<input type="text" placeholder="Insert your name" class="contact__form-input">
-						</div>
-
-						<div class="contact__form-div">
-							<label for="" class="contact__form-tag">Email</label>
-							<input type="email" placeholder="Insert your email" class="contact__form-input">
-						</div>
-
-						<div class="contact__form-div contact__form-area">
-							<label for="" class="contact__form-tag">Project</label>
-							<textarea name="" id="" cols="30" rows="10" placeholder="Write your project" class="contact__form-input"></textarea>
-						</div>
-
-						<button class="button">Send Message</button>
-					</form>
 				</div>
 			</div>
 
@@ -360,41 +336,6 @@
 
 	<!-- ===== AOS ANIMATE JS ===== -->
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-	<script>
-		// ===== PORTFOLIO ===== //
-		const modalViews = document.querySelectorAll('.portfolio__modal'),
-				modalBtns = document.querySelectorAll('.portfolio__button'),
-				modalClose = document.querySelectorAll('.portfolio__modal-close'),
-				portfolioButtonLink = document.querySelectorAll('.portfolio__button-link');
-
-		let modal = function(modalClick){
-			modalViews[modalClick].classList.add('active-modal');
-		}
-
-		modalBtns.forEach((mb,i)=>{
-			mb.addEventListener('click', ()=>{
-				modal(i)
-			})
-		})
-
-		modalClose.forEach((mc) =>{
-			mc.addEventListener('click', ()=>{
-				modalViews.forEach((mv) =>{
-					mv.classList.remove('active-modal')
-				})
-			})
-		})
-
-		portfolioButtonLink.forEach((bc) =>{
-			bc.addEventListener('click', ()=>{
-				modalViews.forEach((bv) =>{
-					bv.classList.remove('active-modal')
-				})
-			})
-		})
-// ===== end portfolio ===== //
-	</script>	
 	
 	<!-- ===== MAIN JS ===== -->
 	<script src="assets/js/script.js"></script>

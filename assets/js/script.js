@@ -28,36 +28,36 @@ window.addEventListener('scroll', scrollActive);
 // ===== end scroll sections active link ===== //
 
 // ===== PORTFOLIO ===== //
-// const modalViews = document.querySelectorAll('.portfolio__modal'),
-// 		modalBtns = document.querySelectorAll('.portfolio__button'),
-// 		modalClose = document.querySelectorAll('.portfolio__modal-close'),
-// 		portfolioButtonLink = document.querySelectorAll('.portfolio__button-link');
+const modalViews = document.querySelectorAll('.portfolio__modal'),
+		modalBtns = document.querySelectorAll('.portfolio__button'),
+		modalClose = document.querySelectorAll('.portfolio__modal-close'),
+		portfolioButtonLink = document.querySelectorAll('.portfolio__button-link');
 
-// let modal = function(modalClick){
-// 	modalViews[modalClick].classList.add('active-modal');
-// }
+const modal = function(modalClick){
+	modalViews[modalClick].classList.add('active-modal');
+}
 
-// modalBtns.forEach((mb,i)=>{
-// 	mb.addEventListener('click', ()=>{
-// 		modal(i)
-// 	})
-// })
+modalBtns.forEach((mb,i)=>{
+	mb.addEventListener('click', ()=>{
+		modal(i)
+	})
+})
 
-// modalClose.forEach((mc) =>{
-// 	mc.addEventListener('click', ()=>{
-// 		modalViews.forEach((mv) =>{
-// 			mv.classList.remove('active-modal')
-// 		})
-// 	})
-// })
+modalClose.forEach((mc) =>{
+	mc.addEventListener('click', ()=>{
+		modalViews.forEach((mv) =>{
+			mv.classList.remove('active-modal')
+		})
+	})
+})
 
-// portfolioButtonLink.forEach((bc) =>{
-// 	bc.addEventListener('click', ()=>{
-// 		modalViews.forEach((bv) =>{
-// 			bv.classList.remove('active-modal')
-// 		})
-// 	})
-// })
+portfolioButtonLink.forEach((bc) =>{
+	bc.addEventListener('click', ()=>{
+		modalViews.forEach((bv) =>{
+			bv.classList.remove('active-modal')
+		})
+	})
+})
 // ===== end portfolio ===== //
 
 // ===== DARK LIGHT THEME ===== //
@@ -173,7 +173,12 @@ sectionTitle.forEach((n, i) => {
 
 // 5. portfolio -> .portfolio__container
 
-// 6. contact -> .contact__title, .contact__card, .contact__form, .contact__closing
+// 6. contact -> .contact__card
+const contactCard = document.querySelectorAll('.contact__card');
+contactCard.forEach((n, i) => {
+	n.dataset.aos = 'fade-down';
+	n.dataset.aosDelay = i * 100;
+});
 
 // 7. footer -> .footer__title, .footer__list, .footer__social
 
