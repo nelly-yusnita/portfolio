@@ -76,12 +76,12 @@
 		<section class="home" id="home">
 			<div class="home__container">
 				<div class="home__data container">
-					<span class="home__subtitle" data-aos="fade-down">Hello, My name is</span>
-					<h1 class="home__title" data-aos="fade-down" data-aos-delay="100">Nelly Yusnita</h1>
-					<p class="home__profession" data-aos="fade-down" data-aos-delay="150">I'm a freelance <span>Frontend Developer</span></p>
+					<span class="home__subtitle" data-aos="fade-down" data-aos-delay="1600">Hello, My name is</span>
+					<h1 class="home__title" data-aos="fade-down" data-aos-delay="1700">Nelly Yusnita</h1>
+					<p class="home__profession" data-aos="fade-down" data-aos-delay="1800">I'm a freelance <span>Frontend Developer</span></p>
 				</div>
 
-				<div class="home__img" data-aos="fade-down" data-aos-delay="200">
+				<div class="home__img" data-aos="fade-down" data-aos-delay="1900">
 					<img src="assets/img/home_img.png" alt="">
 				</div>
 			</div>
@@ -346,43 +346,17 @@
 	</footer>
 	<!-- ===== end footer ===== -->
 
+	<!-- ===== OVERLAY ===== -->
+	<div class="overlay">
+		<h1 class="overlay__title">Hi There!</h1>
+	</div>
+	<!-- ===== end overlay ===== -->
+
 	<!-- ===== AOS ANIMATE JS ===== -->
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-	<script>
-		// ===== PORTFOLIO ===== //
-		const modalViews = document.querySelectorAll('.portfolio__modal'),
-				modalBtns = document.querySelectorAll('.portfolio__button'),
-				modalClose = document.querySelectorAll('.portfolio__modal-close'),
-				portfolioButtonLink = document.querySelectorAll('.portfolio__button-link');
-
-		const modal = function(modalClick){
-			modalViews[modalClick].classList.add('active-modal');
-		}
-
-		modalBtns.forEach((mb,i)=>{
-			mb.addEventListener('click', ()=>{
-				modal(i)
-			})
-		})
-
-		modalClose.forEach((mc) =>{
-			mc.addEventListener('click', ()=>{
-				modalViews.forEach((mv) =>{
-					mv.classList.remove('active-modal')
-				})
-			})
-		})
-
-		portfolioButtonLink.forEach((bc) =>{
-			bc.addEventListener('click', ()=>{
-				modalViews.forEach((bv) =>{
-					bv.classList.remove('active-modal')
-				})
-			})
-		})	
-// ===== end portfolio ===== //
-	</script>
+	<!-- ===== GSAP ===== -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 	
 	<!-- ===== MAIN JS ===== -->
 	<script src="assets/js/script.js"></script>

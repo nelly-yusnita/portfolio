@@ -28,37 +28,49 @@ window.addEventListener('scroll', scrollActive);
 // ===== end scroll sections active link ===== //
 
 // ===== PORTFOLIO ===== //
-// const modalViews = document.querySelectorAll('.portfolio__modal'),
-// 		modalBtns = document.querySelectorAll('.portfolio__button'),
-// 		modalClose = document.querySelectorAll('.portfolio__modal-close'),
-// 		portfolioButtonLink = document.querySelectorAll('.portfolio__button-link');
+const modalViews = document.querySelectorAll('.portfolio__modal'),
+		modalBtns = document.querySelectorAll('.portfolio__button'),
+		modalClose = document.querySelectorAll('.portfolio__modal-close'),
+		portfolioButtonLink = document.querySelectorAll('.portfolio__button-link');
 
-// const modal = function(modalClick){
-// 	modalViews[modalClick].classList.add('active-modal');
-// }
+const modal = function(modalClick){
+	modalViews[modalClick].classList.add('active-modal');
+}
 
-// modalBtns.forEach((mb,i)=>{
-// 	mb.addEventListener('click', ()=>{
-// 		modal(i)
-// 	})
-// })
+modalBtns.forEach((mb,i)=>{
+	mb.addEventListener('click', ()=>{
+		modal(i)
+	})
+})
 
-// modalClose.forEach((mc) =>{
-// 	mc.addEventListener('click', ()=>{
-// 		modalViews.forEach((mv) =>{
-// 			mv.classList.remove('active-modal')
-// 		})
-// 	})
-// })
+modalClose.forEach((mc) =>{
+	mc.addEventListener('click', ()=>{
+		modalViews.forEach((mv) =>{
+			mv.classList.remove('active-modal')
+		})
+	})
+})
 
-// portfolioButtonLink.forEach((bc) =>{
-// 	bc.addEventListener('click', ()=>{
-// 		modalViews.forEach((bv) =>{
-// 			bv.classList.remove('active-modal')
-// 		})
-// 	})
-// })
+portfolioButtonLink.forEach((bc) =>{
+	bc.addEventListener('click', ()=>{
+		modalViews.forEach((bv) =>{
+			bv.classList.remove('active-modal')
+		})
+	})
+})
 // ===== end portfolio ===== //
+
+// Overlay - GSAP //
+TweenMax.to(".overlay__title", 2, {
+   opacity: 0,
+   y: -60,
+   ease: Expo.easeInOut
+})
+TweenMax.to(".overlay", 2, {
+   delay: 1,
+   height: "0",
+   ease: Expo.easeInOut
+})
 
 // ===== DARK LIGHT THEME ===== //
 const themeButton = document.getElementById('theme-button');

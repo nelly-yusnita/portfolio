@@ -1,6 +1,16 @@
 /* ===== GOOGLE FONTS ===== */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;500;600;700&display=swap');
 
+/* ===== FONT FACE ===== */
+@font-face{
+	font-family: 'modernline_-_personal_useRg';
+    	src: url('../fonts/modernline-webfont.woff2') format('woff2'),
+         url('../fonts/modernline-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+/* ===== end font face ===== */
+
 /* ===== VARIABLES CSS ===== */
 :root{
 	--header-height: 3.5rem;
@@ -22,6 +32,7 @@
 	/* ===== Font and Typography ===== */
 	--title-font: 'Abril Fatface', cursive;
 	--body-font: 'Poppins', sans-serif;
+	--special-font: 'modernline_-_personal_useRg';
 	--biggest-font-size: 1.85rem;
 	--h1-font-size: 1.5rem;
 	--h2-font-size: 1.25rem;
@@ -161,6 +172,10 @@ body.dark-theme{
 }
 .dark-theme .footer__circle{
 	background-color: var(--body-light-color);
+}
+.dark-theme .overlay{
+	background-color: var(--body-light-color);
+	color: var(--text-light-color);
 }
 /* ===== end variables light theme ===== */
 
@@ -655,6 +670,34 @@ body.dark-theme{
 	font-size: var(--smaller-font-size);
 }
 /* ===== end footer ===== */
+
+/* ===== OVERLAY ===== */
+.overlay{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   z-index: 1500;
+   background-color: var(--blue-lightest-color);
+   color: var(--white-color);
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   z-index: 2000;
+}
+.overlay__title{
+   font-family: var(--special-font);
+   font-size: var(--biggest-font-size);
+}
+/* ===== end overlay ===== */
 
 /* ===== BREAKPOINTS ===== */
 /* For small devices */
