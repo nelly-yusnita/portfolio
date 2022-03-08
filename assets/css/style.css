@@ -173,10 +173,10 @@ body.dark-theme{
 .dark-theme .footer__circle{
 	background-color: var(--body-light-color);
 }
-.dark-theme .overlay{
+/*.dark-theme .overlay{
 	background-color: var(--body-light-color);
 	color: var(--text-light-color);
-}
+}*/
 /* ===== end variables light theme ===== */
 
 /* ===== SCROLL BAR ===== */
@@ -355,9 +355,6 @@ body.dark-theme{
 /* ===== end header & nav ===== */
 
 /* ===== HOME ===== */
-.home{
-   padding-top: calc(var(--header-height) + 3.5rem);
-}
 .home__data{
    text-align: center;
 }
@@ -669,7 +666,7 @@ body.dark-theme{
 /* ===== end footer ===== */
 
 /* ===== OVERLAY ===== */
-.overlay{
+/*.overlay{
    position: fixed;
    top: 0;
    left: 0;
@@ -693,7 +690,7 @@ body.dark-theme{
 .overlay__title{
    font-family: var(--special-font);
    font-size: var(--biggest-font-size);
-}
+}*/
 /* ===== end overlay ===== */
 
 /* ===== BREAKPOINTS ===== */
@@ -714,6 +711,24 @@ body.dark-theme{
 	/* ===== end nav ===== */
 }
 
+@media screen and (max-width: 576px){
+	/* ===== HOME ===== */
+	.home{
+		width: 100%;
+		min-height: 100vh;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+	/* ===== end home ===== */
+}
+
 /* For medium devices */
 @media screen and (min-width: 576px){
 	/* ===== NAV ===== */
@@ -721,6 +736,12 @@ body.dark-theme{
 		width: 328px;
 	}
 	/* ===== end nav ====== */
+
+	/* ===== HOME ===== */
+	.home{
+		padding-top: calc(var(--header-height) + 3.5rem);
+	}
+	/* ===== end home ===== */
 
 	/* ===== PORTFOLIO ===== */
    .portfolio__container{
@@ -739,12 +760,11 @@ body.dark-theme{
 	}
 	/* ===== end contact ===== */
 }
-
 @media screen and (min-width: 767px){
 	/* ===== HOME ===== */
 	.home{
-      padding-top: 10rem;
-   }
+		padding-top: 10rem;
+	}
 	/* ===== end home ===== */
 
 	/* ===== CONTACT ===== */
