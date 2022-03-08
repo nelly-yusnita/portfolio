@@ -173,10 +173,10 @@ body.dark-theme{
 .dark-theme .footer__circle{
 	background-color: var(--body-light-color);
 }
-/*.dark-theme .overlay{
+.dark-theme .overlay{
 	background-color: var(--body-light-color);
 	color: var(--text-light-color);
-}*/
+}
 /* ===== end variables light theme ===== */
 
 /* ===== SCROLL BAR ===== */
@@ -669,7 +669,7 @@ body.dark-theme{
 /* ===== end footer ===== */
 
 /* ===== OVERLAY ===== */
-/*.overlay{
+.overlay{
    position: fixed;
    top: 0;
    left: 0;
@@ -693,7 +693,7 @@ body.dark-theme{
 .overlay__title{
    font-family: var(--special-font);
    font-size: var(--biggest-font-size);
-}*/
+}
 /* ===== end overlay ===== */
 
 /* ===== BREAKPOINTS ===== */
