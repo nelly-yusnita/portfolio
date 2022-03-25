@@ -1,11 +1,3 @@
-// ===== CHANGE BACKGROUND HEADER ===== //
-function scrollHeader(){
-	const header = document.getElementById('header')
-	if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader);
-// ===== end change background header ===== //
-
 // ===== SCROLL SECTIONS ACTIVE LINK ===== //
 const sections = document.querySelectorAll('section[id]');
 
@@ -27,50 +19,13 @@ function scrollActive(){
 window.addEventListener('scroll', scrollActive);
 // ===== end scroll sections active link ===== //
 
-// ===== PORTFOLIO ===== //
-const modalViews = document.querySelectorAll('.portfolio__modal'),
-		modalBtns = document.querySelectorAll('.portfolio__button'),
-		modalClose = document.querySelectorAll('.portfolio__modal-close'),
-		portfolioButtonLink = document.querySelectorAll('.portfolio__button-link');
-
-const modal = function(modalClick){
-	modalViews[modalClick].classList.add('active-modal');
+// ===== CHANGE BACKGROUND HEADER ===== //
+function scrollHeader(){
+	const header = document.getElementById('header')
+	if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
 }
-
-modalBtns.forEach((mb,i)=>{
-	mb.addEventListener('click', ()=>{
-		modal(i)
-	})
-})
-
-modalClose.forEach((mc) =>{
-	mc.addEventListener('click', ()=>{
-		modalViews.forEach((mv) =>{
-			mv.classList.remove('active-modal')
-		})
-	})
-})
-
-portfolioButtonLink.forEach((bc) =>{
-	bc.addEventListener('click', ()=>{
-		modalViews.forEach((bv) =>{
-			bv.classList.remove('active-modal')
-		})
-	})
-})
-// ===== end portfolio ===== //
-
-// Overlay - GSAP //
-// TweenMax.to(".overlay__title", 2, {
-//    opacity: 0,
-//    y: -60,
-//    ease: Expo.easeInOut
-// })
-// TweenMax.to(".overlay", 2, {
-//    delay: 1,
-//    height: "0",
-//    ease: Expo.easeInOut
-// });
+window.addEventListener('scroll', scrollHeader);
+// ===== end change background header ===== //
 
 // ===== DARK LIGHT THEME ===== //
 const themeButton = document.getElementById('theme-button');
@@ -97,13 +52,45 @@ themeButton.addEventListener('click', () => {
 })
 // ===== end dark light theme ===== //
 
+// ===== PORTFOLIO ===== //
+const modalViews = document.querySelectorAll('.portfolio__modal'),
+		modalBtns = document.querySelectorAll('.portfolio__button'),
+		modalClose = document.querySelectorAll('.portfolio__modal-close'),
+		portfolioButtonLink = document.querySelectorAll('.portfolio__button-link');
+
+let modal = function(modalClick){
+	modalViews[modalClick].classList.add('active-modal');
+}
+
+modalBtns.forEach((mb,i)=>{
+	mb.addEventListener('click', ()=>{
+		modal(i)
+	})
+})
+
+modalClose.forEach((mc) =>{
+	mc.addEventListener('click', ()=>{
+		modalViews.forEach((mv) =>{
+			mv.classList.remove('active-modal')
+		})
+	})
+})
+
+portfolioButtonLink.forEach((bc) =>{
+	bc.addEventListener('click', ()=>{
+		modalViews.forEach((bv) =>{
+			bv.classList.remove('active-modal')
+		})
+	})
+})
+// ===== end portfolio ===== //
+
 // ===== LANGUAGES ===== //
 const navLanguages = document.querySelector('.nav__languages'),
 		languageButton = document.querySelectorAll('.language__button');
 
 // 1. Home Section
-const homeSubtitle = document.querySelector('.home__subtitle'),
-		homeProfession = document.querySelector('.home__profession');
+const homeGreeting = document.querySelector('.home__greeting');
 
 // 2. About Section
 const aboutTitle = document.querySelector('.about__title'),
@@ -119,8 +106,7 @@ languageButton.forEach(el =>{
 
 		const attr = el.getAttribute('language');
 		// 1. Home Section
-		homeSubtitle.textContent = data[attr].home__subtitle;
-		homeProfession.textContent = data[attr].home__profession;
+		homeGreeting.textContent = data[attr].home__greeting;
 
 		// 2. About Section
 		aboutTitle.textContent = data[attr].about__title;
@@ -135,11 +121,10 @@ var data = {
 	// ===== ENGLISH VERSION ===== //
 	"english":{
 		// 1. Home Section
-		"home__subtitle" : "Hello, My name is",
-		"home__profession" : "I'm a freelance Frontend Developer",
+		"home__greeting" : "Hello, I'm",
 
 		// 2. About Section
-		"about__title" : "Hey! My Name is Nelly Yusnita. I'm a Freelance Frontend Developer based in Medan.",
+		"about__title" : "Hey! My Name is Nelly Yusnita. I'm a Freelance Frontend Developer based in Jakarta.",
 		"about__description" : "I love working on fun little projects especially for individuals and small businesses during my free time. I provide custom designs at afforable prices. Frequently your website is the first impression your customers will get, so make sure it’s a good one. Since my time is split between a few different things, I’m not able to take on every project I’d like to, but I'm always looking for fun work. Take a look at my portfolio below, if you think I'd be a good match send me an email or message on my social media.",
 
 		// 3. Contact Section
@@ -150,11 +135,10 @@ var data = {
 	// ===== INDONESIA VERSION ===== //
 	"indonesia":{
 		// 1. Home Section
-		"home__subtitle" : "Halo, Nama Saya",
-		"home__profession" : "Saya seorang freelance Frontend Developer",
+		"home__greeting" : "Halo, Saya",
 
 		// 2. About Section
-		"about__title" : "Hai, nama saya Nelly Yusnita. Saya seorang freelance Frontend Developer dari Medan.",
+		"about__title" : "Hai, nama saya Nelly Yusnita. Saya seorang freelance Frontend Developer dari Jakarta.",
 		"about__description" : "Saya suka mengerjakan proyek kecil yang menyenangkan terutama untuk individu dan bisnis kecil di waktu luang saya. Saya menyediakan desain khusus dengan harga terjangkau. Seringkali website Anda adalah kesan pertama yang akan didapatkan pelanggan Anda, jadi pastikan Anda punya website yang bagus. Karena waktu saya terbagi antara beberapa hal yang berbeda, saya tidak dapat mengerjakan setiap proyek yang saya inginkan, tetapi saya selalu mencari pekerjaan yang menyenangkan. Lihatlah portofolio saya di bawah ini, jika menurut Anda saya cocok, kirimkan saya email atau pesan di media sosial saya.",
 
 		// 3. Contact Section
@@ -164,14 +148,36 @@ var data = {
 }
 // ===== end languages ===== //
 
-// Overlay //
-TweenMax.to(".overlay__title", 2, {
-   opacity: 0,
-   y: -60,
-   ease: Expo.easeInOut
-})
-TweenMax.to(".overlay", 2, {
-   delay: 1,
-   height: "0",
-   ease: Expo.easeInOut
-})
+// ===== AOS ANIMATE ===== //
+// 1. home -> .home__greeting, .home__name, .home__education, .home__buttons, .home__handle, .home__social, .home__scroll
+
+// 2. reusable css classes -> .section__subtitle, .section__title
+const sectionSubtitle = document.querySelectorAll('.section__subtitle');
+sectionSubtitle.forEach((n, i) => {
+	n.dataset.aos = 'fade-down';
+	n.dataset.aosDelay = i * 100;
+});
+
+const sectionTitle = document.querySelectorAll('.section__title');
+sectionTitle.forEach((n, i) => {
+	n.dataset.aos = 'fade-down';
+	n.dataset.aosDelay = i * 150;
+});
+
+// 3. about -> .about__img, .about__data
+
+// 4. portfolio -> .portfolio__container
+
+// 5. contact -> .contact__card, .contact__closing
+const contactCard = document.querySelectorAll('.contact__card');
+contactCard.forEach((n, i) => {
+	n.dataset.aos = 'fade-down';
+	n.dataset.aosDelay = i * 100;
+});
+
+// 6. footer -> .footer__title, .footer__list, .footer__social
+AOS.init({
+	duration: 1500,
+	once: true,  
+});
+// ===== end aos animate ===== //
