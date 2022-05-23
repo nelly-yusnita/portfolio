@@ -4,68 +4,64 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- ===== FAVICON ==== -->
+	<!-- ===== FAVICON ===== -->
 	<link rel="shortcut icon" href="assets/img/favicon.jpg" type="image/x-icon">
+
+	<!-- ===== BOXICONS ===== -->
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
 	<!-- ===== MAIN CSS ===== -->
 	<link rel="stylesheet" href="assets/css/style.css">
 
-	<!-- ===== BOXICONS ===== -->
-	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-
-	<!-- ===== AOS ANIMATE CSS ===== -->
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-
-	<title>Nelly Yusnita &mdash; Portfolio</title>
+	<title>Portfolio - Nelly Yusnita</title>
 </head>
 <body>
 	<!-- ===== HEADER ===== -->
 	<header class="header" id="header">
 		<nav class="nav container">
-			<a href="#" class="nav__logo">Nelly Yusnita</a>
+			<div class="nav__languages">
+				<div class="language__button active-language" language='english'>
+					<img src="assets/img/eng.png" alt="" class="language__icon eng__icon">
+				</div>
+				<div class="language__button" language='indonesia'>
+					<img src="assets/img/idn.png" alt="" class="language__icon indo__icon">
+				</div>
+			</div>
 
 			<div class="nav__menu">
 				<ul class="nav__list">
 					<li class="nav__item">
 						<a href="#home" class="nav__link active-link">
 							<i class='bx bx-home-alt'></i>
+							<span>Home</span>
 						</a>
 					</li>
 
 					<li class="nav__item">
 						<a href="#about" class="nav__link">
 							<i class='bx bx-user' ></i>
+							<span>About</span>
 						</a>
 					</li>
 
 					<li class="nav__item">
 						<a href="#portfolio" class="nav__link">
 							<i class='bx bx-briefcase'></i>
+							<span>Portfolio</span>
 						</a>
 					</li>
 
 					<li class="nav__item">
 						<a href="#contact" class="nav__link">
 							<i class='bx bx-message-square-detail'></i>
+							<span>Contact</span>
 						</a>
 					</li>
 				</ul>
 			</div>
 
-			<!-- Nav Languages -->
-			<div class="nav__languages">
-				<div class="language__button english__button active-language" language='english'>
-					<img src="assets/img/eng.png" alt="" class="language__icon">
-				</div>
-				<div class="language__button" language='indonesia'>
-					<img src="assets/img/idn.png" alt="" class="language__icon indonesia__icon">
-				</div>
-			</div>
-
 			<!-- Theme change button -->
-			<div class="nav__theme">
-				<i class='bx bx-moon change-theme' id="theme-button"></i>
-			</div>
+			<i class='bx bx-moon change-theme' id="theme-button"></i>
 		</nav>
 	</header>
 	<!-- ===== end header ===== -->
@@ -73,26 +69,27 @@
 	<!-- ===== MAIN ===== -->
 	<main class="main">
 		<!-- ===== HOME ===== -->
-		<section class="home section" id="home">
-			<div class="home__container container grid">
-				<div class="home__data">
-					<span class="home__greeting" data-aos="fade-down">Hello, I'm</span>
-					<h1 class="home__name" data-aos="fade-down" data-aos-delay="100">Nelly Yusnita</h1>
-					<h3 class="home__education" data-aos="fade-down" data-aos-delay="150">Freelance Frontend Developer</h3>
+		<section class="home" id="home">
+			<div class="home__container container">
+				<div class="profile__border">
+					<img src="assets/img/profile.jpg" alt="" class="profile__img">
+					<span class="profile__subtitle">Hi there!</span>
+				</div>
+				<div class="profile__data">
+					<span class="profile__greeting">Hello, I'm</span>
+					<h2 class="profile__name">Nelly Yusnita</h2>
+					<h3 class="profile__profession">Freelance Junior Frontend Developer</h3>
 
-					<div class="home__buttons" data-aos="fade-down" data-aos-delay="200">
-						<a href="#contact" class="button button--transparent">
-							Contact Me
+					<div class="profile__buttons">
+						<!-- Insert your CV -->
+						<a download="" href="assets/pdf/Gianell-Cv.pdf" class="button button--ghost">
+							Resume <i class='bx bxs-download'></i>
 						</a>
-						<a href="#about" class="button button--blue">About Me</a>
+						<a href="#about" class="button">About Me</a>
 					</div>
 				</div>
 
-				<div class="home__handle" data-aos="fade-down" data-aos-delay="250">
-					<img src="assets/img/profile_img.jpg" alt="" class="home__img">
-				</div>
-
-				<div class="home__social grid" data-aos="fade-up-right">
+				<div class="home__social grid">
 					<a href="https://www.linkedin.com/in/nellyyusnita/" target="_blank" class="home__social-link">
 						<i class='bx bxl-linkedin-square' ></i>
 					</a>
@@ -101,7 +98,7 @@
 					</a>
 				</div>
 
-				<a href="#about" class="home__scroll grid" data-aos="fade-down-left">
+				<a href="#about" class="home__scroll grid">
 					<i class='bx bx-mouse home__scroll-icon' ></i>
 					<span class="home__scroll-name">Scroll Down</span>
 				</a>
@@ -115,14 +112,27 @@
 			<h2 class="section__title">About Me</h2>
 
 			<div class="about__container grid">
-				<div class="about__images" data-aos="fade-right">
-					<img src="assets/img/about1.jpg" alt="" class="about__img-big">
-					<img src="assets/img/about2.jpg" alt="" class="about__img-small">
-				</div>
+				<img src="assets/img/about_img.jpg" alt="" class="about__img">
 
-				<div class="about__data" data-aos="fade-left">
-					<h2 class="about__title">Hey! My Name is Nelly Yusnita. I'm a Freelance Frontend Developer based in Jakarta.</h2>
-					<p class="about__description">I love working on fun little projects especially for individuals and small businesses during my free time. I provide custom designs at afforable prices. Frequently your website is the first impression your customers will get, so make sure it’s a good one. Since my time is split between a few different things, I’m not able to take on every project I’d like to, but I'm always looking for fun work. Take a look at my portfolio below, if you think I'd be a good match send me an email or message on my social media <img src="assets/img/heart.png" alt="" class="about__description-icon"></p>
+				<div class="about__data">
+					<p class="about__description">Hey! My Name is Nelly Yusnita. I'm a Freelance Junior Frontend Developer based in Indonesia. I love working on fun little projects especially for individuals and small businesses during my free time. I provide custom designs at afforable prices. Frequently your website is the first impression your customers will get, so make sure it’s a good one. Since my time is split between a few different things, I’m not able to take on every project I’d like to, but I'm always looking for fun work. Take a look at my portfolio below, if you think I'd be a good match send me an email or message on my social media.</p>
+
+					<div class="social__media">
+						<!-- Instagram -->
+						<a href="https://www.instagram.com/nellyyusnita_/" class="social__media-link" target="_blank">
+							<i class='bx bxl-instagram'></i>
+						</a>
+
+						<!-- TikTok -->
+						<a href="https://www.tiktok.com/@nelly_yusnita" class="social__media-link" target="_blank">
+							<i class='bx bxl-tiktok'></i>
+						</a>
+
+						<!-- Youtube -->
+						<a href="https://www.youtube.com/channel/UCgKHU1zY53lapz1ehpUZcRQ" class="social__media-link" target="_blank">
+							<i class='bx bxl-youtube'></i>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -133,8 +143,8 @@
 			<span class="section__subtitle">My Portfolio</span>
 			<h2 class="section__title">Recent Works</h2>
 
-			<div class="portfolio__container grid" data-aos="fade-down">
-				<!-- 1 -->
+			<div class="portfolio__container grid">
+				<!-- Design 1 - Coffee -->
 				<div class="portfolio__card">
 					<img src="assets/img/coffee.PNG" alt="" class="portfolio__img">
 
@@ -149,12 +159,12 @@
 							<img src="assets/img/coffee.PNG" alt="" class="portfolio__modal-img">
 							<span class="portfolio__modal-description">This website is demo for testing purpose, no orders shall be fulfilled.</span>
 
-							<a href="https://nelly-yusnita.github.io/coffee/" class="button button--blue" target="_blank">View Website</a>
+							<a href="https://nelly-yusnita.github.io/coffee/" class="button" target="_blank">View Website</a>
 						</div>
 					</div>	
 				</div>
 
-				<!-- 2 -->
+				<!-- Design 2 - Plants -->
 				<div class="portfolio__card">
 					<img src="assets/img/plants.PNG" alt="" class="portfolio__img">
 
@@ -169,12 +179,12 @@
 							<img src="assets/img/plants.PNG" alt="" class="portfolio__modal-img">
 							<span class="portfolio__modal-description">This website is demo for testing purpose, no orders shall be fulfilled.</span>
 
-							<a href="https://nelly-yusnita.github.io/plants/" class="button button--blue" target="_blank">View Website</a>
+							<a href="https://nelly-yusnita.github.io/plants/" class="button" target="_blank">View Website</a>
 						</div>
 					</div>	
 				</div>
 
-				<!-- 3 -->
+				<!-- Design 3 - Tartine -->
 				<div class="portfolio__card">
 					<img src="assets/img/tartine.png" alt="" class="portfolio__img">
 
@@ -189,52 +199,12 @@
 							<img src="assets/img/tartine.png" alt="" class="portfolio__modal-img">
 							<span class="portfolio__modal-description">This website is demo for testing purpose, no orders shall be fulfilled.</span>
 
-							<a href="https://nelly-yusnita.github.io/tartine/" class="button button--blue" target="_blank">View Website</a>
+							<a href="https://nelly-yusnita.github.io/tartine/" class="button" target="_blank">View Website</a>
 						</div>
 					</div>
 				</div>
 
-				<!-- 4 -->
-				<div class="portfolio__card">
-					<img src="assets/img/undangdigitalaja.PNG" alt="" class="portfolio__img">
-
-					<div class="button--flex portfolio__button">
-						Demo <i class="bx bx-right-arrow-alt button__icon"></i>
-					</div>
-
-					<div class="portfolio__modal">
-						<div class="porfolio__modal-content">
-							<i class="bx bx-x portfolio__modal-close"></i>
-
-							<img src="assets/img/undangdigitalaja.PNG" alt="" class="portfolio__modal-img">
-							<span class="portfolio__modal-description">This website is demo for testing purpose, no orders shall be fulfilled.</span>
-
-							<a href="https://undang-digital-aja.github.io/main/" class="button button--blue" target="_blank">View Website</a>
-						</div>
-					</div>	
-				</div>
-
-				<!-- 5 -->
-				<div class="portfolio__card">
-					<img src="assets/img/footwear.PNG" alt="" class="portfolio__img">
-
-					<div class="button--flex portfolio__button">
-						Demo <i class="bx bx-right-arrow-alt button__icon"></i>
-					</div>
-
-					<div class="portfolio__modal">
-						<div class="porfolio__modal-content">
-							<i class="bx bx-x portfolio__modal-close"></i>
-
-							<img src="assets/img/footwear.PNG" alt="" class="portfolio__modal-img">
-							<span class="portfolio__modal-description">This website is demo for testing purpose, no orders shall be fulfilled.</span>
-
-							<a href="https://nelly-yusnita.github.io/footwear/" class="button button--blue" target="_blank">View Website</a>
-						</div>
-					</div>	
-				</div>
-
-				<!-- 6 -->
+				<!-- Design 4 - Cleanskin -->
 				<div class="portfolio__card">
 					<img src="assets/img/cleanskin.png" alt="" class="portfolio__img">
 
@@ -249,7 +219,7 @@
 							<img src="assets/img/cleanskin.png" alt="" class="portfolio__modal-img">
 							<span class="portfolio__modal-description">This website is demo for testing purpose, no orders shall be fulfilled.</span>
 
-							<a href="https://nelly-yusnita.github.io/cleanskin/" class="button button--blue" target="_blank">View Website</a>
+							<a href="https://nelly-yusnita.github.io/cleanskin/" class="button" target="_blank">View Website</a>
 						</div>
 					</div>	
 				</div>
@@ -262,92 +232,22 @@
 			<span class="section__subtitle">Get in touch</span>
 			<h2 class="section__title">Contact Me</h2>
 
-			<div class="contact__container grid">
-				<div class="contact__content">
-					<div class="contact__info grid">
-						<!-- 1 -->
-						<div class="contact__card">
-							<i class='bx bx-envelope contact__card-icon'></i>
-							<h3 class="contact__card-title">Email</h3>
-							<span class="contact__card-data">yusnitaanelly@gmail.com</span>
+			<div class="contact__content">
+				<p class="contact__description">If you have a project that you want to carry out, do not hesitate and tell me what it is, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you.</p>
 
-							<a href="mailto:yusnitaanelly@gmail.com" target="_blank" class="button--flex">
-								Write me <i class="bx bx-right-arrow-alt button__icon"></i>
-							</a>
-						</div>
-
-						<!-- 2 -->
-						<div class="contact__card">
-							<i class="bx bxl-whatsapp contact__card-icon"></i>
-							<h3 class="contact__card-title">Whatsapp</h3>
-							<span class="contact__card-data">0878-9688-9778</span>
-
-							<a href="https://api.whatsapp.com/send?phone=+6287896889778&text=Hello, more information!" target="_blank" class="button--flex">
-								Write me <i class="bx bx-right-arrow-alt button__icon"></i>
-							</a>
-						</div>
-
-						<!-- 3 -->
-						<div class="contact__card">
-							<i class='bx bxl-telegram contact__card-icon'></i>
-							<h3 class="contact__card-title">Telegram</h3>
-							<span class="contact__card-data">@nellyyusnita</span>
-
-							<a href="https://t.me/nellyyusnita" target="_blank" class="button--flex">
-								Write me <i class="bx bx-right-arrow-alt button__icon"></i>
-							</a>
-						</div>
-					</div>
-				</div>
+				<a href="mailto:yusnitaanelly@gmail.com" target="_blank" class="button">
+					Say Hello
+				</a>
 			</div>
-
-			<span class="contact__closing" data-aos="fade-down">If you have a project that you want to carry out, do not hesitate and tell me what it is, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</span>
 		</section>
-		<!-- ===== end contract ===== -->
+		<!-- ===== end contact ===== -->
 	</main>
 	<!-- ===== end main ===== -->
 
 	<!-- ===== FOOTER ===== -->
-	<footer class="footer">
-		<div class="footer__container container">
-			<h1 class="footer__title" data-aos="fade-down">Nelly Yusnita</h1>
-
-			<ul class="footer__list" data-aos="fade-down" data-aos-delay="100">
-				<li>
-					<a href="#about" class="footer__link">About</a>
-				</li>
-				<div class="footer__circle"></div>
-				<li>
-					<a href="#portfolio" class="footer__link">Portfolio</a>
-				</li>
-				<div class="footer__circle"></div>
-				<li>
-					<a href="#contact" class="footer__link">Contact</a>
-				</li>
-			</ul>
-
-			<ul class="footer__social" data-aos="fade-down" data-aos-delay="150">
-				<a href="https://www.instagram.com/nellyyusnita_/" target="_blank" class="footer__social-link">
-					<i class="bx bxl-instagram"></i>
-				</a>
-				<!-- <a href="https://www.facebook.com/profile.php?id=100009298274433" target="_blank" class="footer__social-link">
-					<i class="bx bxl-facebook"></i>
-				</a> -->
-				<a href="https://www.youtube.com/channel/UCgKHU1zY53lapz1ehpUZcRQ" target="_blank" class="footer__social-link">
-					<i class='bx bxl-youtube'></i>
-				</a>
-			</ul>
-
-			<span class="footer__copy">
-				&#169; 2022 &mdash; By Nelly Yusnita
-			</span>
-		</div>
-	</footer>
+	<footer class="footer container">Designed & Built by Nelly Yusnita<br>&#169; 2022</footer>
 	<!-- ===== end footer ===== -->
 
-	<!-- ===== AOS ANIMATE JS ===== -->
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	
 	<!-- ===== MAIN JS ===== -->
 	<script src="assets/js/script.js"></script>
 </body>

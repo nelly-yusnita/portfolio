@@ -22,35 +22,11 @@ window.addEventListener('scroll', scrollActive);
 // ===== CHANGE BACKGROUND HEADER ===== //
 function scrollHeader(){
 	const header = document.getElementById('header')
+
 	if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader);
 // ===== end change background header ===== //
-
-// ===== DARK LIGHT THEME ===== //
-const themeButton = document.getElementById('theme-button');
-const darkTheme = 'dark-theme';
-const iconTheme = 'bx-sun';
-
-const selectedTheme = localStorage.getItem('selected-theme');
-const selectedIcon = localStorage.getItem('selected-icon');
-
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
-
-if (selectedTheme) {
-	document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-	themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme)
-}
-
-themeButton.addEventListener('click', () => {
-	document.body.classList.toggle(darkTheme)
-	themeButton.classList.toggle(iconTheme)
-
-	localStorage.setItem('selected-theme', getCurrentTheme())
-	localStorage.setItem('selected-icon', getCurrentIcon())
-})
-// ===== end dark light theme ===== //
 
 // ===== PORTFOLIO ===== //
 const modalViews = document.querySelectorAll('.portfolio__modal'),
@@ -85,99 +61,28 @@ portfolioButtonLink.forEach((bc) =>{
 })
 // ===== end portfolio ===== //
 
-// ===== LANGUAGES ===== //
-const navLanguages = document.querySelector('.nav__languages'),
-		languageButton = document.querySelectorAll('.language__button');
+// ===== DARK LIGHT THEME ===== //
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'bx-sun'
 
-// 1. Home Section
-const homeGreeting = document.querySelector('.home__greeting');
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
 
-// 2. About Section
-const aboutTitle = document.querySelector('.about__title'),
-		aboutDescription = document.querySelector('.about__description');
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun'
 
-// 3. Contact Section
-const contactClosing = document.querySelector('.contact__closing');
-
-languageButton.forEach(el =>{
-	el.addEventListener('click', ()=>{
-		navLanguages.querySelector('.active-language').classList.remove('active-language');
-		el.classList.add('active-language');
-
-		const attr = el.getAttribute('language');
-		// 1. Home Section
-		homeGreeting.textContent = data[attr].home__greeting;
-
-		// 2. About Section
-		aboutTitle.textContent = data[attr].about__title;
-		aboutDescription.textContent = data[attr].about__description;
-
-		// 3. Contact Section
-		contactClosing.textContent = data[attr].contact__closing;
-	});
-});
-
-var data = {
-	// ===== ENGLISH VERSION ===== //
-	"english":{
-		// 1. Home Section
-		"home__greeting" : "Hello, I'm",
-
-		// 2. About Section
-		"about__title" : "Hey! My Name is Nelly Yusnita. I'm a Freelance Frontend Developer based in Jakarta.",
-		"about__description" : "I love working on fun little projects especially for individuals and small businesses during my free time. I provide custom designs at afforable prices. Frequently your website is the first impression your customers will get, so make sure it’s a good one. Since my time is split between a few different things, I’m not able to take on every project I’d like to, but I'm always looking for fun work. Take a look at my portfolio below, if you think I'd be a good match send me an email or message on my social media.",
-
-		// 3. Contact Section
-		"contact__closing" : "If you have a project that you want to carry out, do not hesitate and tell me what it is, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!"
-	},
-	// ===== end english version ===== //
-
-	// ===== INDONESIA VERSION ===== //
-	"indonesia":{
-		// 1. Home Section
-		"home__greeting" : "Halo, Saya",
-
-		// 2. About Section
-		"about__title" : "Hai, nama saya Nelly Yusnita. Saya seorang freelance Frontend Developer dari Jakarta.",
-		"about__description" : "Saya suka mengerjakan proyek kecil yang menyenangkan terutama untuk individu dan bisnis kecil di waktu luang saya. Saya menyediakan desain khusus dengan harga terjangkau. Seringkali website Anda adalah kesan pertama yang akan didapatkan pelanggan Anda, jadi pastikan Anda punya website yang bagus. Karena waktu saya terbagi antara beberapa hal yang berbeda, saya tidak dapat mengerjakan setiap proyek yang saya inginkan, tetapi saya selalu mencari pekerjaan yang menyenangkan. Lihatlah portofolio saya di bawah ini, jika menurut Anda saya cocok, kirimkan saya email atau pesan di media sosial saya.",
-
-		// 3. Contact Section
-		"contact__closing" : "Jika Anda memiliki proyek yang ingin Anda laksanakan, jangan ragu dan beri tahu saya apa itu, kotak masuk saya selalu terbuka. Apakah Anda memiliki pertanyaan atau hanya ingin menyapa, saya akan mencoba yang terbaik untuk menghubungi Anda kembali!"
-	}
-	// ===== end indonesia version ===== //
+if (selectedTheme){
+	document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+	themeButton.classList[selectedIcon === 'bx bx-moon' ? 'add' : 'remove'](iconTheme)
 }
-// ===== end languages ===== //
 
-// ===== AOS ANIMATE ===== //
-// 1. home -> .home__greeting, .home__name, .home__education, .home__buttons, .home__handle, .home__social, .home__scroll
+themeButton.addEventListener('click', () =>{
+	document.body.classList.toggle(darkTheme)
+	themeButton.classList.toggle(iconTheme)
 
-// 2. reusable css classes -> .section__subtitle, .section__title
-const sectionSubtitle = document.querySelectorAll('.section__subtitle');
-sectionSubtitle.forEach((n, i) => {
-	n.dataset.aos = 'fade-down';
-	n.dataset.aosDelay = i * 100;
-});
+	localStorage.setItem('selected-theme', getCurrentTheme())
+	localStorage.setItem('selected-icon', getCurrentIcon())
+})
+// ===== end dark light theme ===== //
 
-const sectionTitle = document.querySelectorAll('.section__title');
-sectionTitle.forEach((n, i) => {
-	n.dataset.aos = 'fade-down';
-	n.dataset.aosDelay = i * 150;
-});
-
-// 3. about -> .about__img, .about__data
-
-// 4. portfolio -> .portfolio__container
-
-// 5. contact -> .contact__card, .contact__closing
-const contactCard = document.querySelectorAll('.contact__card');
-contactCard.forEach((n, i) => {
-	n.dataset.aos = 'fade-down';
-	n.dataset.aosDelay = i * 100;
-});
-
-// 6. footer -> .footer__title, .footer__list, .footer__social
-AOS.init({
-	duration: 1500,
-	once: true,  
-});
-// ===== end aos animate ===== //
