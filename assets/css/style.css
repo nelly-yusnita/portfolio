@@ -9,14 +9,6 @@
    font-weight: normal;
    font-style: normal;
 }
-
-@font-face{
-   font-family: 'sf_monoregular';
-   src: url('../fonts/fontsfree-net-sfmono-regular-webfont.woff2') format('woff2'),
-        url('../fonts/fontsfree-net-sfmono-regular-webfont.woff') format('woff');
-   font-weight: normal;
-   font-style: normal;
-}
 /* ===== end font face ===== */
 
 /* ===== VARIABLES CSS ===== */
@@ -143,6 +135,7 @@ img{
                hsla(211, 94%, 64%, .5)
    );
    color: #FFF;
+   cursor: pointer;
    -webkit-transition: .4s;
    transition: .4s;
 }
@@ -161,6 +154,7 @@ img{
          align-items: center;
    font-weight: var(--font-medium);
    cursor: pointer;
+   color: #141414;
 }
 .button__icon{
    font-size: 1rem;
@@ -176,6 +170,10 @@ img{
    background: transparent;
    border: 2px solid var(--blue-color);
    color: var(--blue-color);
+}
+.button--ghost:hover{
+   background-color: var(--blue-color);
+   color: #FFF;
 }
 /* ===== end button ====== */
 
@@ -562,6 +560,73 @@ body.dark-theme{
 }
 /* ===== end footer ===== */
 
+/* ===== POP UP ===== */
+.popup{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,.5);
+   -webkit-backdrop-filter: blur(15px) !important;
+         backdrop-filter: blur(15px) !important;
+   z-index: var(--z-modal);
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   text-align: center;
+   display: none;
+}
+.popup__container{
+   background-color: #FFF;
+   color: #141414;
+   padding: 1rem;
+   border-radius: .5rem;
+   text-align: center;
+}
+.popup__icon{
+   font-size: 2.5rem;
+   margin-bottom: .5rem;
+}
+.popup__description{
+   display: block;
+}
+/* ===== end popup ===== */
+
+/* ===== SCROLL UP ===== */
+.scrollup{
+   position: fixed;
+   right: 1rem;
+   bottom: -30%;
+   background-color: #FFF;
+   box-shadow: 0 8px 12px hsla(228,66%,45%,.1);
+   display: inline-flex;
+   padding: 0.35rem;
+   border-radius: .25rem;
+   color: #141414;
+   font-size: 1.25rem;
+   z-index: var(--z-tooltip);
+   transition: .3s;
+}
+.scrollup:hover{
+   transform: translateY(-.25rem);
+   color: var(--blue-color);
+}
+
+/* Show Scroll Up*/
+.show-scroll{
+   bottom: 3rem;
+   right: 3rem;
+   display: none;
+}
+/* ===== end scroll up ===== */
+
 /* ===== SCROLL BAR ===== */
 ::-webkit-scrollbar{
    width: 0.6rem;
@@ -608,6 +673,32 @@ body.dark-theme{
       margin-right: 1rem;
    }
    /* ===== end reusable css classes ===== */
+}
+
+@media screen and (min-width: 321px){
+   /* ===== HOME ===== */
+   .home__social,
+   .home__scroll{
+      bottom: 12rem;
+   }
+   /* ===== end home ===== */
+}
+
+@media screen and (min-width: 410px){
+   /* ===== HOME ===== */
+   .home__social{
+      bottom: 5rem;
+   }
+   .home__scroll{
+      bottom: 4rem;
+   }
+   /* ===== end home ===== */
+
+   /* ===== POP UP ===== */
+   .popup__container{
+      width: 400px;
+   }
+   /* ===== end popup ===== */
 }
 
 /* For medium devices */
@@ -772,6 +863,12 @@ body.dark-theme{
       margin-bottom: 3rem;
    }
    /* ===== end footer ===== */
+
+   /* ===== SCROLL UP ===== */
+   .show-scroll{
+      display: inline-flex;
+   }
+   /* ===== end scroll up ===== */
 }
 
 @media screen and (min-width: 1040px){
@@ -781,4 +878,21 @@ body.dark-theme{
       margin-right: auto;
    }
    /* ===== end reusable css classes ===== */
+}
+
+/* For 2K & 4K resolutions */
+@media screen and (min-width: 2048px){
+   /* ===== BASE ===== */
+   body{
+      zoom: 1.5;
+   }
+   /* ===== end base ===== */
+}
+
+@media screen and (min-width: 3848px){
+   /* ===== BASE ===== */
+   body{
+      zoom: 3;
+   }
+   /* ===== end base ===== */
 }

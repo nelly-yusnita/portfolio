@@ -19,6 +19,7 @@
 	<!-- ===== HEADER ===== -->
 	<header class="header" id="header">
 		<nav class="nav container">
+			<!-- Nav Languages -->
 			<div class="nav__languages">
 				<div class="language__button active-language" language='english'>
 					<img src="assets/img/eng.png" alt="" class="language__icon eng__icon">
@@ -82,9 +83,12 @@
 
 					<div class="profile__buttons">
 						<!-- Insert your CV -->
-						<a download="" href="assets/pdf/Gianell-Cv.pdf" class="button button--ghost">
+						<!-- <a download="" href="#" class="button button--ghost">
 							Resume <i class='bx bxs-download'></i>
-						</a>
+						</a> -->
+						<div class="button button--ghost download__button">
+							Resume <i class='bx bxs-download'></i>
+						</div>
 						<a href="#about" class="button">About Me</a>
 					</div>
 				</div>
@@ -235,7 +239,7 @@
 			<div class="contact__content">
 				<p class="contact__description">If you have a project that you want to carry out, do not hesitate and tell me what it is, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you.</p>
 
-				<a href="mailto:yusnitaanelly@gmail.com" target="_blank" class="button">
+				<a href="mailto:yusnitaanelly@gmail.com" target="_blank" class="button contact__button">
 					Say Hello
 				</a>
 			</div>
@@ -244,9 +248,27 @@
 	</main>
 	<!-- ===== end main ===== -->
 
+	<!-- ===== POP UP ===== -->
+	<div class="popup">
+		<div class="popup__container container">
+			<i class='bx bx-note popup__icon'></i>
+			<span class="popup__description">I'm sorry, my resume still not available.</span>
+		</div>
+	</div>
+	<!-- ===== end pop up ===== -->
+
 	<!-- ===== FOOTER ===== -->
-	<footer class="footer container">Designed & Built by Nelly Yusnita<br>&#169; 2022</footer>
+	<footer class="footer">Designed & Built by Nelly Yusnita<br>&#169; 2022</footer>
 	<!-- ===== end footer ===== -->
+
+	<!-- ===== SCROLL UP ===== -->
+	<a href="#" class="scrollup" id="scroll-up">
+		<i class='bx bx-chevron-up'></i>
+	</a>
+	<!-- ===== end scroll up ===== -->
+
+	<!-- ===== SCROLL REVEAL ===== -->
+	<script src="assets/js/scrollreveal.min.js"></script>
 
 	<!-- ===== MAIN JS ===== -->
 	<script src="assets/js/script.js"></script>
