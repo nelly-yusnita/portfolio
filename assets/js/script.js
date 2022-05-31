@@ -188,7 +188,7 @@ sr.reveal(`.home__social`, {delay: 350, origin: 'left'})
 sr.reveal(`.home__scroll`, {delay: 350, origin: 'right'})
 
 // About //
-sr.reveal(`.social__media-link, .portfolio__card`, {interval: 100, origin: 'top'})
+sr.reveal(`.social__media-link`, {interval: 100, origin: 'top'})
 sr.reveal(`.about__description`, {delay: 150})
 // ===== end scroll reveal animation ===== //
 
