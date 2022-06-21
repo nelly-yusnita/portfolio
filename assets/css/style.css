@@ -1,5 +1,7 @@
 /* ===== GOOGLE FONTS ===== */
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;500;600;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;500;600;700&display=swap');*/
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jost:wght@300;400;500;600;700&display=swap');
 
 /* ===== FONT FACE ===== */
 @font-face{
@@ -22,7 +24,7 @@
 
    /* ===== Font and typography ===== */
    /*.5rem = 8px | 1rem = 16px ...*/
-   --body-font: 'Poppins', sans-serif;
+   --body-font: 'Jost', sans-serif;
    --title-font: 'Abril Fatface', cursive;
    --special-font: 'modernline_-_personal_useRg';
    --biggest-font-size: 2.25rem;
@@ -208,6 +210,9 @@ body.dark-theme{
 }
 .dark-theme .button--ghost:hover{
    color: #FFF;
+}
+.dark-theme .portfolio__modal-description{
+   color: #141414;
 }
 .dark-theme .footer{
    color: rgba(255,255,255,.5);
