@@ -1,3 +1,32 @@
+// ===== SHOW MENU ===== //
+const navMenu = document.getElementById('nav-menu'),
+		navToggle = document.getElementById('nav-toggle'),
+		navClose = document.getElementById('nav-close');
+
+if(navToggle){
+	navToggle.addEventListener('click', () =>{
+		navMenu.classList.add('show-menu')
+	})
+}
+
+if(navClose){
+	navClose.addEventListener('click', () =>{
+		navMenu.classList.remove('show-menu')
+	})
+}
+// ===== end show menu ===== //
+
+// ===== REMOVE MENU MOBILE ===== //
+const navLink = document.querySelectorAll('.nav__link');
+
+function linkAction(){
+	const navMenu = document.getElementById('nav-menu')
+
+	navMenu.classList.remove('show-menu');
+}
+navLink.forEach(n => n.addEventListener('click', linkAction));
+// ===== end remove menu mobile ===== //
+
 // ===== SCROLL SECTIONS ACTIVE LINK ===== //
 const sections = document.querySelectorAll('section[id]');
 
@@ -23,7 +52,7 @@ window.addEventListener('scroll', scrollActive);
 function scrollHeader(){
 	const header = document.getElementById('header')
 
-	if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
+	if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');
 }
 window.addEventListener('scroll', scrollHeader);
 // ===== end change background header ===== //
@@ -60,65 +89,6 @@ portfolioButtonLink.forEach((bc) =>{
 	})
 })
 // ===== end portfolio ===== //
-
-// ===== LANGUAGES ===== //
-const navLanguages = document.querySelector('.nav__languages'),
-		languageButton = document.querySelectorAll('.language__button');
-
-// 1. Home Section
-const profileGreeting = document.querySelector('.profile__greeting');
-
-// 2. About Section
-const aboutDescription = document.querySelector('.about__description');
-
-// 3. Contact Section
-const contactDescription = document.querySelector('.contact__description');
-
-languageButton.forEach(el =>{
-	el.addEventListener('click', ()=>{
-		navLanguages.querySelector('.active-language').classList.remove('active-language');
-		el.classList.add('active-language');
-
-		const attr = el.getAttribute('language');
-		// 1. Home Section
-		profileGreeting.textContent = data[attr].profile__greeting;
-
-		// 2. About Section
-		aboutDescription.textContent = data[attr].about__description;
-
-		// 3. Contact Section
-		contactDescription.textContent = data[attr].contact__description;
-	});
-});
-
-var data = {
-	// ENGLISH //
-	"english":{
-		// 1. Home Section
-		"profile__greeting" : "Hello, I'm",
-
-		// 2. About Section
-		"about__description" : "Hey! My Name is Nelly Yusnita. I'm a Freelance Junior Frontend Developer based in Indonesia. I love working on fun little projects especially for individuals and small businesses during my free time. I provide custom designs at afforable prices. Frequently your website is the first impression your customers will get, so make sure it’s a good one. Since my time is split between a few different things, I’m not able to take on every project I’d like to, but I'm always looking for fun work. Take a look at my portfolio below, if you think I'd be a good match send me an email or message on my social media.",
-
-		// 3. Contact Section
-		"contact__description" : "If you have a project that you want to carry out, do not hesitate and tell me what it is, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you."
-	},
-	// end english //
-
-	// INDONESIA //
-	"indonesia":{
-		// 1. Home Section
-		"profile__greeting" : "Halo, Saya",
-
-		// 2. About Section
-		"about__description" : "Hai, nama saya Nelly Yusnita. Saya seorang freelance Frontend Developer dari Indonesia. Saya suka mengerjakan proyek kecil yang menyenangkan terutama untuk individu dan bisnis kecil di waktu luang saya. Saya menyediakan desain khusus dengan harga terjangkau. Seringkali website Anda adalah kesan pertama yang akan didapatkan pelanggan Anda, jadi pastikan Anda punya website yang bagus. Karena waktu saya terbagi antara beberapa hal yang berbeda, saya tidak dapat mengerjakan setiap proyek yang saya inginkan, tetapi saya selalu mencari pekerjaan yang menyenangkan. Lihatlah portofolio saya di bawah ini, jika menurut Anda saya cocok, kirimkan saya email atau pesan di media sosial saya.",
-
-		// 3. Contact Section
-		"contact__description" : "Jika Anda memiliki proyek yang ingin Anda laksanakan, jangan ragu dan beri tahu saya apa itu, kotak masuk saya selalu terbuka. Apakah Anda memiliki pertanyaan atau hanya ingin menyapa, saya akan mencoba yang terbaik untuk menghubungi Anda kembali."
-	}
-	// end indonesia //
-}
-// ===== end languages ===== //
 
 // ===== POP UP ===== //
 const downloadButton = document.querySelector('.download__button'),
@@ -167,28 +137,94 @@ themeButton.addEventListener('click', () =>{
 })
 // ===== end dark light theme ===== //
 
-// ===== SCROLL REVEAL ANIMATION ===== //
+// ===== LANGUAGES ===== //
+const navLanguages = document.querySelector('.nav__languages'),
+		languageButton = document.querySelectorAll('.language__button');
+
+// 1. Home Section
+const profileGreeting = document.querySelector('.profile__greeting');
+
+// 2. About Section
+const aboutParagraph1 = document.querySelector('.about__paragraph1'),
+		aboutParagraph2 = document.querySelector('.about__paragraph2'),
+		aboutParagraph3 = document.querySelector('.about__paragraph3');
+
+// 3. Contact Section
+const contactDescription = document.querySelector('.contact__description');
+
+languageButton.forEach(el =>{
+	el.addEventListener('click', ()=>{
+		navLanguages.querySelector('.active-language').classList.remove('active-language');
+		el.classList.add('active-language');
+
+		const attr = el.getAttribute('language');
+		// 1. Home Section
+		profileGreeting.textContent = data[attr].profile__greeting;
+
+		// 2. About Section
+		aboutParagraph1.textContent = data[attr].about__paragraph1;
+		aboutParagraph2.textContent = data[attr].about__paragraph2;
+		aboutParagraph3.textContent = data[attr].about__paragraph3;
+
+		// 3. Contact Section
+		contactDescription.textContent = data[attr].contact__description;
+	});
+});
+
+var data = {
+	// ENGLISH //
+	"english":{
+		// 1. Home Section
+		"profile__greeting" : "Hello, I'm",
+
+		// 2. About Section
+		"about__paragraph1" : "Hey! My name is Nelly Yusnita. I'm a Freelance Junior Frontend Developer based in Indonesia. I love working on fun little projects especially for individuals and small businesses during my free time.",
+		"about__paragraph2" : "I provide custom designs at afforable prices. Frequently your website is the first impression your customers will get, so make sure it’s a good one. Since my time is split between a few different things, I’m not able to take on every project I’d like to, but I'm always looking for fun work.",
+		"about__paragraph3" : "Take a look at my portfolio below, if you think I'd be a good match send me an email or message on my social media. Here are a few technologies I’ve been working with recently:",
+
+		// 3. Contact Section
+		"contact__description" : "If you have a project that you want to carry out, do not hesitate and tell me what it is, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you."
+	},
+	// end english //
+
+	// INDONESIA //
+	"indonesia":{
+		// 1. Home Section
+		"profile__greeting" : "Halo, Saya",
+
+		// 2. About Section
+		"about__paragraph1" : "Hai! nama saya Nelly Yusnita. Saya seorang freelance Frontend Developer dari Indonesia. Saya suka mengerjakan proyek kecil yang menyenangkan terutama untuk individu dan bisnis kecil di waktu luang saya.",
+		"about__paragraph2" : "Saya menyediakan desain khusus dengan harga terjangkau. Seringkali website Anda adalah kesan pertama yang akan didapatkan pelanggan Anda, jadi pastikan Anda punya website yang bagus. Karena waktu saya terbagi antara beberapa hal yang berbeda, saya tidak dapat mengerjakan setiap proyek yang saya inginkan, tetapi saya selalu mencari pekerjaan yang menyenangkan.",
+		"about__paragraph3" : "Lihatlah portofolio saya di bawah ini, jika menurut Anda saya cocok, kirimkan saya email atau pesan di media sosial saya. Berikut adalah beberapa teknologi yang telah saya kerjakan baru-baru ini:",
+
+		// 3. Contact Section
+		"contact__description" : "Jika Anda memiliki proyek yang ingin Anda laksanakan, jangan ragu dan beri tahu saya apa itu, kotak masuk saya selalu terbuka. Apakah Anda memiliki pertanyaan atau hanya ingin menyapa, saya akan mencoba yang terbaik untuk menghubungi Anda kembali."
+	}
+	// end indonesia //
+}
+// ===== end languages ===== //
+
 const sr = ScrollReveal({
 	origin: 'top',
 	distance: '60px',
 	duration: 2500,
 	delay: 400,
 	// reset: true
-})
+});
 
-sr.reveal(`.profile__border, .section__subtitle, .about__img, .contact__description`)
-sr.reveal(`.section__title, .contact__button`, {delay: 150})
+sr.reveal(`.profile__border, .section__subtitle, .about__img, .contact__description`);
+sr.reveal(`.section__title, .contact__button`, {delay: 150});
 
 // Home //
-sr.reveal(`.profile__greeting`, {delay: 150})
-sr.reveal(`.profile__name`, {delay: 200})
-sr.reveal(`.profile__profession`, {delay: 250})
-sr.reveal(`.profile__buttons`, {delay: 300})
-sr.reveal(`.home__social`, {delay: 350, origin: 'left'})
-sr.reveal(`.home__scroll`, {delay: 350, origin: 'right'})
+sr.reveal(`.profile__greeting`, {delay: 150});
+sr.reveal(`.profile__name`, {delay: 200});
+sr.reveal(`.profile__profession`, {delay: 250});
+sr.reveal(`.profile__buttons`, {delay: 300});
+sr.reveal(`.home__social`, {delay: 350, origin: 'left'});
+sr.reveal(`.home__scroll`, {delay: 350, origin: 'right'});
 
 // About //
-sr.reveal(`.social__media-link`, {interval: 100, origin: 'top'})
-sr.reveal(`.about__description`, {delay: 150})
+sr.reveal(`.social__media-link`, {interval: 100, origin: 'top'});
+sr.reveal(`.about__content`, {delay: 150});
 // ===== end scroll reveal animation ===== //
 

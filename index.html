@@ -5,13 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- ===== FAVICON ===== -->
-	<link rel="shortcut icon" href="assets/img/favicon.jpg" type="image/x-icon">
+   <link rel="shortcut icon" href="assets/img/favicon.jpg" type="image/x-icon">
 
-	<!-- ===== BOXICONS ===== -->
-	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+   <!-- ===== BOXICONS ===== -->
+   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-	<!-- ===== MAIN CSS ===== -->
-	<link rel="stylesheet" href="assets/css/style.css">
+   <!-- ===== MAIN CSS ===== -->
+   <link rel="stylesheet" href="assets/css/style.css">
 
 	<title>Portfolio - Nelly Yusnita</title>
 </head>
@@ -29,40 +29,49 @@
 				</div>
 			</div>
 
-			<div class="nav__menu">
+			<div class="nav__menu" id="nav-menu">
 				<ul class="nav__list">
 					<li class="nav__item">
 						<a href="#home" class="nav__link active-link">
-							<i class='bx bx-home-alt'></i>
-							<span>HOME</span>
+							<i class='bx bx-home-alt nav__link-icon'></i>
+							<span>Home</span>
 						</a>
 					</li>
 
 					<li class="nav__item">
 						<a href="#about" class="nav__link">
-							<i class='bx bx-user' ></i>
-							<span>ABOUT</span>
+							<i class='bx bx-user nav__link-icon'></i>
+							<span>About</span>
 						</a>
 					</li>
 
 					<li class="nav__item">
 						<a href="#portfolio" class="nav__link">
-							<i class='bx bx-briefcase'></i>
-							<span>PORTFOLIO</span>
+							<i class='bx bx-briefcase nav__link-icon'></i>
+							<span>Portfolio</span>
 						</a>
 					</li>
 
 					<li class="nav__item">
 						<a href="#contact" class="nav__link">
-							<i class='bx bx-message-square-detail'></i>
-							<span>CONTACT</span>
+							<i class='bx bx-message-square-detail nav__link-icon'></i>
+							<span>Contact</span>
 						</a>
 					</li>
 				</ul>
-			</div>
+
+				<div class="nav__close" id="nav-close">
+			   	<i class='bx bx-x'></i>
+				</div>
+		 	</div>
 
 			<!-- Theme change button -->
 			<i class='bx bx-moon change-theme' id="theme-button"></i>
+
+			<!-- Toggle button -->
+		 	<div class="nav__toggle" id="nav-toggle">
+				<i class='bx bx-menu-alt-right'></i>
+		 	</div>
 		</nav>
 	</header>
 	<!-- ===== end header ===== -->
@@ -116,10 +125,8 @@
 			<h2 class="section__title">About Me</h2>
 
 			<div class="about__container grid">
-				<img src="assets/img/about_img.jpg" alt="" class="about__img">
-
-				<div class="about__data">
-					<p class="about__description">Hey! My Name is Nelly Yusnita. I'm a Freelance Junior Frontend Developer based in Indonesia. I love working on fun little projects especially for individuals and small businesses during my free time. I provide custom designs at afforable prices. Frequently your website is the first impression your customers will get, so make sure it’s a good one. Since my time is split between a few different things, I’m not able to take on every project I’d like to, but I'm always looking for fun work. Take a look at my portfolio below, if you think I'd be a good match send me an email or message on my social media.</p>
+				<div class="about__content">
+					<img src="assets/img/about_img.jpg" alt="" class="about__img">
 
 					<div class="social__media">
 						<!-- Instagram -->
@@ -136,6 +143,34 @@
 						<a href="https://www.youtube.com/channel/UCgKHU1zY53lapz1ehpUZcRQ" class="social__media-link" target="_blank">
 							<i class='bx bxl-youtube'></i>
 						</a>
+					</div>
+				</div>
+
+				<div class="about__content">
+					<div class="about__description grid">
+						<span class="about__paragraph1">
+							Hey! My name is Nelly Yusnita. I'm a Freelance Junior Frontend Developer based in Indonesia. I love working on fun little 	projects especially for individuals and small businesses during my free time.
+						</span>
+						<span class="about__paragraph2">
+							I provide custom designs at afforable prices. Frequently your website is the first impression your customers will get, so make sure it’s a good one. Since my time is split between a few different things, I’m not able to take on every project I’d like to, but I'm always looking for fun work.
+						</span>
+						<span class="about__paragraph3">
+							Take a look at my portfolio below, if you think I'd be a good match send me an email or message on my social media. Here are a few technologies I’ve been working with recently:
+						</span>
+					</div>
+					<div class="about__details grid">
+						<span class="about__details-description">
+							<i class='bx bxs-message-square-check about__details-icon'></i>
+							HTML
+						</span>
+						<span class="about__details-description">
+							<i class='bx bxs-message-square-check about__details-icon'></i>
+							CSS
+						</span>
+						<span class="about__details-description">
+							<i class='bx bxs-message-square-check about__details-icon'></i>
+							JavaScript
+						</span>
 					</div>
 				</div>
 			</div>
@@ -271,6 +306,6 @@
 	<script src="assets/js/scrollreveal.min.js"></script>
 
 	<!-- ===== MAIN JS ===== -->
-	<script src="assets/js/script.js"></script>
+   <script src="assets/js/script.js"></script>
 </body>
 </html>
